@@ -3,35 +3,34 @@ import type{ NavItems } from './types'
 export const NAV_ITEMS: NavItems = {
     home: {
         path: '/',
-        title: 'home'
+        title: 'inicio'
     },
     blog: {
         path: '/blog',
-        title: 'blog'
+        title: 'recetas'
+    },
+    thermomix: {
+        path: '/thermomix',
+        title: 'thermomix'
     },
     tags: {
         path: '/tags',
-        title: 'tags'
-    },
-    media: {
-        path: '/media',
-        title: 'media'
+        title: 'cateogorías'
     },
     about: {
-        path: '/about',
-        title: 'about'
+        path: '/acerca',
+        title: 'Acerca'
     }
 }
 
 export const SITE = {
     // Your site's detail?
-    name: 'Ink',
-    title: 'Astro - Ink',
-    description: 'Crisp, minimal, personal blog theme for Astro',
-    url: 'https://astro-ink.vercel.app',
-    githubUrl: 'https://github.com/one-aalam/astro-ink',
+    name: 'Cocina con Edu',
+    title: 'Cocina Edu',
+    description: 'Las recetas de Edu',
+    url: 'https://recetas.eduardoparra.es',
+    githubUrl: 'https://github.com/soker90/cooking-blog',
     listDrafts: true
-    // description ?
 }
 
 export const PAGE_SIZE = 8
