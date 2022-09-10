@@ -1,33 +1,55 @@
 ---
 layout: $/layouts/post.astro
-title: Receta de prueba
+title: Tarta de crema de orujo
 date: 2022-09-10
-image: https://images.unsplash.com/photo-1589409514187-c21d14df0d04?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80
+image: /images/recepits/001-Tarta-crema-de-orujo.jpg
 category: postres
+author: Eduardo Parra
 tags:
 - tartas
 - postres
-description: There's a simple secret to building a faster website — just ship less.
+description: Tarta de crema de orujo con o sin thermomix
 ---
 
-Unfortunately, modern web development has been trending in the opposite direction—towards more. More JavaScript, more features, more moving parts, and ultimately more complexity needed to keep it all running smoothly.
+## Ingredientes
 
-Today I'm excited to publicly share Astro: a new kind of static site builder that delivers lightning-fast performance with a modern developer experience. To design Astro, we borrowed the best parts of our favorite tools and then added a few innovations of our own, including:
+### Base
+- 14 Galletas digestive
+- 60g de mantequilla
 
-- Bring Your Own Framework (BYOF): Build your site using React, Svelte, Vue, Preact, web components, or just plain ol' HTML + JavaScript.
-- 100% Static HTML, No JS: Astro renders your entire page to static HTML, removing all JavaScript from your final build by default.
-- On-Demand Components: Need some JS? Astro can automatically hydrate interactive components when they become visible on the page. If the user never sees it, they never load it.
-- Fully-Featured: Astro supports TypeScript, Scoped CSS, CSS Modules, Sass, Tailwind, Markdown, MDX, and any of your favorite npm packages.
-- SEO Enabled: Automatic sitemaps, RSS feeds, pagination and collections take the pain out of SEO and syndication.
+### Relleno
+- 100 ml Crema de orujo
+- 5 hojas de gelatina
+- 250 ml de nata para montar (fría)
+- 250 gr de queso mascarpone
+- 15 ml de leche
+- 100 gr de azúcar
+- 1 yogur griego
 
-## H1 is good
+### Cobertura
+- 130ml Agua
+- 1 cucharada de café soluble
+- 1 cucharada de azúcar
+- 2 hojas de gelatina
 
-### H2 is good too
+## Herramientas
+ - Thermomix (o batidora)
+ - Bandeja o recipiente para el agua
+ - Molde desmontable para tartas de entre 18 y 22 cm
+ - Bol o recipiente grande
+ 
+## Elaboración
 
-> links are better
-
-[I know](they-are-better)
-
-This post marks the first public beta release of Astro. Missing features and bugs are still to be expected at this early stage. There are still some months to go before an official 1.0 release, but there are already several fast sites built with Astro in production today. We would love your early feedback as we move towards a v1.0 release later this year.
-
-> To learn more about Astro and start building your first site, check out the project README.
+1. Introducir las 5 hojas de gelatina en un recipiente con agua fría al menos 4 min. Continuar con el paso siguiente.
+2. Triturar las galletas (en thermomix, unos segundos a vel 10).
+3. Derretir la mantequilla en el microondas y mezclar con las galletas trituradas. Debería crearse una pasta, cubrir la base del molde y reservar en el frigorífico.
+4. Mezclar el queso mascarpone, el azúcar, el yogur griego y la crema de orujo (en thermomix, unos segundos a vel 2,5).
+5. Calentar la leche e introducir, escurridas, las hojas de gelatina que estaban en remojo. Remover hasta que se disuelvan.
+6. Incorporar la mezcla de leche y gelatina en la mezlca de crema de orujo anterior y mezclar (en thermomix, unos segundos vel 6). Tiene que ser una mezcla homogénea sin grumos, reservar en un recipiente grande.
+7. Montar la nata con batidora, manual, thermomix... Para thermomix, introducir la mariposa, la nata y montar a vel 3 hasta que se monte.
+8. Verter la nata montada en la mezcla anterior y mezclar con movimientos envolventes.
+9. Echar sobre la base de galletas y reservar al menos 4 horas.
+10. Una vez pasado el tiempo y cuajada la mezcla anterior, introducir las hojas de gelatina restantes en agua fría y esperar unos minutos a que se hidraten.
+11. Poner el agua (caliente si no se usa thermomix), el azúcar y el café soluble y mezclar (thermomix, 2min 90º).
+12. Introducir las hojas de gelatina hidratadas y escurridas en la mezcla de café y mezclar hasta disolver.
+13. Dejar templar un poco la mezcla de café, posteriormente, verterla encima de la tarta y reservar en el frigorífico al menos una hora.
