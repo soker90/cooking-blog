@@ -2,11 +2,11 @@ backend:
   name: git-gateway
   branch: master
   commit_messages:
-    create: 'Create {{collection}} “{{slug}}”'
-    update: 'Update {{collection}} “{{slug}}”'
-    delete: 'Delete {{collection}} “{{slug}}”'
-    uploadMedia: '[skip ci] Upload “{{path}}”'
-    deleteMedia: '[skip ci] Delete “{{path}}”'
+    create: 'Creado {{collection}} “{{slug}}”'
+    update: 'Actualizado {{collection}} “{{slug}}”'
+    delete: 'Eliminado {{collection}} “{{slug}}”'
+    uploadMedia: '[skip ci] Subido “{{path}}”'
+    deleteMedia: '[skip ci] Eliminado “{{path}}”'
 
 media_folder: 'public/images/uploads' # Folder where user uploaded files should go
 public_folder: '/images/uploads'
@@ -18,10 +18,10 @@ collections: # A list of collections the CMS should be able to edit
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
       - {label: "Layout", name: "layout", widget: "hidden", default: "$/layouts/post.astro"}
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Description', name: 'description', widget: 'text' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
-      - { label: 'Tags', name: 'tags', widget: 'list' }
-      - { label: 'Author', name: 'author', widget: 'string' }
-      - { label: 'Author Twitter Handle', name: 'authorTwitter', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Titulo', name: 'title', widget: 'string' }
+      - { label: 'Descripción', name: 'description', widget: 'text' }
+      - { label: 'Cuerpo', name: 'body', widget: 'markdown' }
+      - { label: 'Categorias', name: 'tags', widget: 'list' }
+      - { label: 'Autor', name: 'author', widget: 'string' }
+      - { label: 'Usuario Twitter', name: 'authorTwitter', widget: 'string' }
+      - { label: 'Fecha de publicación', name: 'date', widget: 'datetime' }

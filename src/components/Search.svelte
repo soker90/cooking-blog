@@ -62,14 +62,14 @@
         {:else}
             <div class="search__results--none">
                 {#if searchQuery.length}
-                    No matching items found!
+                    No se han encontrado recetas
                 {:else}
-                    Search something and let me find it for you! :-)
+                    Buscar recetas...
                 {/if}
             </div>
         {/if}
     </div>
-    <div class="note"><small>click anywhere outside to close</small></div>
+    <div class="note"><small>Pulsa en cualquier sitio para cerrar la búsqueda</small></div>
 </div>
 <style>
     .search {

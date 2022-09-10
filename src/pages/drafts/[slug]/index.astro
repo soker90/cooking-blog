@@ -8,7 +8,7 @@ export async function getStaticPaths({ }) {
     try {
         allPosts = await Astro.glob('../../../drafts/*.md')
     } catch(error) {
-        console.log('No draft posts found while generating the draft pages')
+        console.log('No se encontraron borradores de publicaciones al generar las páginas de borrador')
     }
     const allSlugs = new Set()
     const allPostsWithSlug = allPosts.map(post => {
