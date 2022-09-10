@@ -1,14 +1,15 @@
 ---
 layout: $/layouts/post.astro
 title: Tarta de crema de orujo
+tags:
+  - tartas
+  - postres
+author: Eduardo Parra
+authorTwitter: eduparra90
 date: 2022-09-10
 image: /images/recepits/001-Tarta-crema-de-orujo.jpg
-category: postres
-author: Eduardo Parra
-tags:
-- tartas
-- postres
 description: Tarta de crema de orujo con o sin thermomix
+category: postres
 ---
 
 ## Ingredientes
