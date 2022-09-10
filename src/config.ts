@@ -6,7 +6,7 @@ export const NAV_ITEMS: NavItems = {
         title: 'inicio'
     },
     blog: {
-        path: '/blog',
+        path: '/recetas',
         title: 'recetas'
     },
     thermomix: {

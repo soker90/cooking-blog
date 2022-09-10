@@ -4,8 +4,8 @@ import PostPreviewList from '$/components/PostPreviewList.astro'
 import Paginator from '$/components/Paginator.astro'
 import { PAGE_SIZE } from '$/config'
 
-let title = 'Blog'
-let description = 'All the articles posted so far...'
+let title = 'Recetas'
+let description = 'Todas las recetas'
 
 export async function getStaticPaths({ paginate }) {
   const allPosts = await Astro.glob('./*.md');
