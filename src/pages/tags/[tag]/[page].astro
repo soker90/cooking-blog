@@ -27,7 +27,7 @@ const { page } = Astro.props
 const { tag } = Astro.params
 ---
 
-<DefaultPageLayout content={{ title: `Posts by Tag: ${tag}`, description: `all of the articles we have posted and linked so far under the tag: ${tag}` }}>
+<DefaultPageLayout content={{ title: `Recetas por categoría: ${tag}`, description: `todas las recetas de la categoría: ${tag}` }}>
     <PostPreviewList posts={page.data} />
     <Paginator page={page} />
 </DefaultPageLayout>
