@@ -3,10 +3,13 @@ layout: $/layouts/post.astro
 title: Arroz con cúrcuma
 description: " Preparación: 15 min | Tiempo total: 40 min | Raciones: 1"
 tags:
-  - blog
+  - arroces
+  - comida
 author: Eduardo Parra
 authorTwitter: eduparra90
-date: 2022-09-29T11:44:37.488Z
+date: 2022-09-29
+image: /images/uploads/img_20180421_151543.jpg
+category: blog
 ---
 ## Ingredientes
 
