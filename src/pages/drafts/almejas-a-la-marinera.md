@@ -10,7 +10,7 @@ date: 2022-10-06T16:47:51.664Z
 ---
 ## Ingredientes
 
-* 500 gr almejas1
+* 500 gr almejas
 * 100 gr Cebolla picada
 * 2 dientes de ajo picados
 * 50 gr Aceite de oliva
