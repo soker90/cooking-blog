@@ -9,7 +9,7 @@ authorTwitter: eduparra90
 date: 2022-09-10
 image: /images/uploads/001-Tarta-crema-de-orujo.jpg
 description: Tarta de crema de orujo con o sin thermomix
-category: postres
+category: recetas
 ---
 
 ## Ingredientes

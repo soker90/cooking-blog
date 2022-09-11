@@ -22,5 +22,5 @@ export const get = () => rss({
         pubDate: item.frontmatter.date,
     })),
     // (optional) inject custom xml
-    customData: `<language>en-us</language>`,
+    customData: `<language>es-es</language>`,
 });

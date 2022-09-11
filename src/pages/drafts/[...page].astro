@@ -12,7 +12,7 @@ export async function getStaticPaths({ paginate, rss }) {
     try {
         allPosts = await Astro.glob('../../drafts/*.md');
     } catch(error) {
-        console.log('No draft posts found while generating the index page for the draft pages')
+        console.log('No se han encontrado borradores de publicaciones al generar la página de índice para las páginas de borrador')
     }
     const sortedPosts = allPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
 
