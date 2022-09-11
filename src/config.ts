@@ -18,7 +18,7 @@ export const NAV_ITEMS: NavItems = {
 export const SITE = {
     // Your site's detail?
     name: 'Cocina con Edu',
-    title: 'Cocina Edu',
+    title: 'Cocina con Edu',
     description: 'Las recetas de Edu',
     url: 'https://recetas.eduardoparra.es',
     githubUrl: 'https://github.com/soker90/cooking-blog',
