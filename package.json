@@ -3,7 +3,7 @@
   "version": "1.0.1",
   "private": true,
   "scripts": {
-    "dev": "astro dev",
+    "dev": "THEME_KEY=ambersky astro dev",
     "build": "astro build",
     "check": "astro check",
     "postbuild": "node ./scripts/search/prepare-index.js",

@@ -52,7 +52,7 @@
 <div class="search">
     <div class="search__ctrl">
         <label for="search"><SearchIcon found={searchResults.length > 0} /></label>
-        <input type="text" name="search" bind:this={searchInput} placeholder="What are you looking for?" bind:value={searchQuery} />
+        <input type="text" name="search" bind:this={searchInput} placeholder="Buscar..." bind:value={searchQuery} />
     </div>
     <div class="search__results">
         {#if searchResults.length}
