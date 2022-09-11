@@ -8,8 +8,8 @@ author: Eduardo Parra
 authorTwitter: eduparra90
 date: 2022-09-10
 image: /images/uploads/001-Tarta-crema-de-orujo.jpg
-description: Tarta de crema de orujo con o sin thermomix
-category: recetas
+description: " Preparación: 30 min | Tiempo total: 5h 30 min | Raciones: 8"
+category: blog
 ---
 
 ## Ingredientes

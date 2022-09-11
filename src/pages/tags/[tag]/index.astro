@@ -3,7 +3,7 @@ import DefaultPageLayout from '$/layouts/default.astro'
 import PostPreviewList from '$/components/PostPreviewList.astro'
 
 export async function getStaticPaths({ }) {
-  const allPosts = await Astro.glob('../../recetas/*.md')
+  const allPosts = await Astro.glob('../../blog/*.md')
   const allTags = new Set()
   allPosts.map(post => {
       post.frontmatter.tags && post.frontmatter.tags.map(tag => allTags.add(tag.toLowerCase()))

@@ -6,12 +6,12 @@ import PostPreviewList from '$/components/PostPreviewList.astro'
 const title = 'Inicio'
 const description = 'Mis recetas'
 
-const posts = await Astro.glob('./recetas/*.md')
+const posts = await Astro.glob('./blog/*.md')
 ---
 <DefaultPageLayout content={{ title, description }} showPageHeader={false}>
     <PostPreviewList posts={posts} />
     <div class="page__actions">
-        <a class="action__go-to-blog" href="/recetas" title="Todas">Todas &rarr;</a>
+        <a class="action__go-to-blog" href="/blog" title="Todas">Todas &rarr;</a>
     </div>
 </DefaultPageLayout>
 
