@@ -3,7 +3,7 @@ layout: $/layouts/post.astro
 title: Sopa de ajo
 description: "Preparación: 24 min | Tiempo total: 30 min | Raciones: 3"
 tags:
-  - Recetas
+  - Drafts
 author: Eduardo Parra
 authorTwitter: eduparra90
 date: 2022-09-15T10:00:53.450Z
