@@ -3,7 +3,7 @@ layout: $/layouts/post.astro
 title: Almejas a la marinera
 description: "Preparación: 10 min | Tiempo total: 28 min | Raciones: 2"
 tags:
-  - blog
+  - pescado
 author: Eduardo Parra
 authorTwitter: eduparra90
 date: 2022-10-06T16:47:51.664Z
