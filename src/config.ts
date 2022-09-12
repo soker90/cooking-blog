@@ -7,7 +7,7 @@ export const NAV_ITEMS: NavItems = {
     },
     tags: {
         path: '/tags',
-        title: 'cateogorías'
+        title: 'categorías'
     },
     about: {
         path: '/acerca',
