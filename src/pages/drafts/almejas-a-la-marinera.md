@@ -6,7 +6,7 @@ tags:
   - pescado
 author: Eduardo Parra
 authorTwitter: eduparra90
-date: 2022-10-06T16:47:00.000Z
+date: 06-10-2022
 ---
 ## Ingredientes
 
