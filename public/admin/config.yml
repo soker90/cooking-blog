@@ -26,7 +26,7 @@ collections: # A list of collections the CMS should be able to edit
       - { label: 'Autor', name: 'author', widget: 'string' }
       - { label: 'Usuario Twitter', name: 'authorTwitter', widget: 'string' }
       - { label: 'Fecha de publicación', name: 'date', widget: 'date' }
-      - { label: 'Imagen', name: 'image', widget: 'image', required: false, format: 'DD-MM-YYYY'}
+      - { label: 'Imagen', name: 'image', widget: 'image', required: false, format: 'YYYY-MM-DD'}
       
   - name: 'draf' # Used in routes, ie.: /admin/collections/:slug/edit
     label: 'Borradores' # Used in the UI, ie.: "New Post"
@@ -41,5 +41,5 @@ collections: # A list of collections the CMS should be able to edit
       - { label: 'Categoría', name: 'category', widget: 'hidden', default: 'blog' }
       - { label: 'Autor', name: 'author', widget: 'string' }
       - { label: 'Usuario Twitter', name: 'authorTwitter', widget: 'string' }
-      - { label: 'Fecha de publicación', name: 'date', widget: 'datetime', required: false, format: 'DD-MM-YYYY' }
+      - { label: 'Fecha de publicación', name: 'date', widget: 'datetime', required: false, format: 'YYYY-MM-DD' }
       - { label: 'Imagen', name: 'image', widget: 'image', required: false}
