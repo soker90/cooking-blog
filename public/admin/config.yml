@@ -37,7 +37,9 @@ collections: # A list of collections the CMS should be able to edit
       - { label: 'Titulo', name: 'title', widget: 'string' }
       - { label: 'Descripción', name: 'description', widget: 'text' }
       - { label: 'Cuerpo', name: 'body', widget: 'markdown' }
-      - { label: 'Categorias', name: 'tags', widget: 'list' }
+      - { label: 'Etiquetas', name: 'tags', widget: 'list' }
+      - { label: 'Categoría', name: 'category', widget: 'hidden', default: 'blog' }
       - { label: 'Autor', name: 'author', widget: 'string' }
       - { label: 'Usuario Twitter', name: 'authorTwitter', widget: 'string' }
       - { label: 'Fecha de publicación', name: 'date', widget: 'datetime' }
+      - { label: 'Imagen', name: 'image', widget: 'image'}
