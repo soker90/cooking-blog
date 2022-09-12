@@ -6,7 +6,8 @@ tags:
   - blog
 author: Eduardo Parra
 authorTwitter: eduparra90
-date: 2022-10-13T21:51:46.886Z
+date: 2022-10-13
+category: blog
 ---
 ## Ingredientes
 

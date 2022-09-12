@@ -6,7 +6,8 @@ tags:
   - comida pasta
 author: Eduardo Parra
 authorTwitter: eduparra90
-date: 2022-09-22T11:40:24.730Z
+date: 2022-09-22
+category: blog
 ---
 ## Ingredientes
 
