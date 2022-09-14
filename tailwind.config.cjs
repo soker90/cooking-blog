@@ -26,6 +26,9 @@ module.exports = {
                 dark: {
                     css: {
                         color: theme("colors.gray.200"),
+                        strong: {
+                            color: colors.dark.primary
+                        }
                     },
                 },
                 DEFAULT: {
