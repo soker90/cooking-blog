@@ -4,8 +4,6 @@ title: Sopa de ajo
 description: "Preparación: 24 min | Tiempo total: 30 min | Raciones: 3"
 tags:
   - sopas
-  - comida
-  - drafts
 author: Eduardo Parra
 authorTwitter: eduparra90
 date: 2022-09-15
