@@ -27,3 +27,4 @@ jobs:
           github_token: $\{{ secrets.GITHUB_TOKEN }}
           github_actor: soker90
           github_repository: soker90/cooking-blog
+          site_drafts_dir: 'src/pages/drafts'
