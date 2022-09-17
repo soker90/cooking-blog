@@ -6,7 +6,7 @@ const sortedPosts = Object.values(allPosts).sort((a, b) => new Date(b.date) - ne
 
 export const get = () => rss({
     // `<title>` field in output xml
-    title: `${SITE.name} | Blog`,
+    title: `${SITE.name}`,
     // `<description>` field in output xml
     description: SITE.description,
     // base URL for RSS <item> links
@@ -23,4 +23,5 @@ export const get = () => rss({
     })),
     // (optional) inject custom xml
     customData: `<language>es-es</language>`,
+    stylesheet: '/rss/styles.xsl',
 });
