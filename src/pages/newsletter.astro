@@ -1,0 +1,27 @@
+---
+import DefaultPageLayout from '$/layouts/default.astro'
+
+const title = 'Suscríbete'
+const description = 'Suscríbete para recibir nuevas recetas'
+---
+<DefaultPageLayout content={{ title, description }} showPageHeader={false}>
+  <div class="newsletter">
+    <h3 id="newsletter-page-title">Suscríbete para recibir las nuevas recetas</h3>
+
+    <form class="form" action="#" method="post" name="revue-form" target="_blank">
+      <input autofocus="" required=""  type="email"  autocomplete="email" placeholder="Introduce aquí tu correo electrónico">
+      <button class="button" type="submit" >
+        <span>¡Suscribirme!</span>
+      </button>
+    </form>
+  </div>
+</DefaultPageLayout>
+
+<style>
+  .newsletter h3{    
+    @apply flex items-center text-5xl font-extrabold text-theme-primary dark:text-theme-dark-primary max-w-full pb-10
+  }
+  .form input {
+    @apply h-4 p-6 pr-11 text-lg leading-10 rounded border-solid bg-theme-primary
+  }
+</style>
