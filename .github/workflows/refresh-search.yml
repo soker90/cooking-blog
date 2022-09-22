@@ -14,22 +14,22 @@ on:
 jobs:
   refresh-search:
     runs-on: ubuntu-latest
-     steps:
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-      - uses: actions/setup-node@v3
-        with:
-          cache: 'npm'
-          node-version: '16'
-      - name: Install dependencies
-        run: npm i
-      - name: refresh
-        run: npm run postbuild
-      - run: |
-        git config user.name "Eduardo Parra"
-        git config user.email soker90@users.noreply.github.com
-        git add .
-        git commit -m "Refresh search data"
-        git push
+      steps:
+        - uses: actions/checkout@v3
+          with:
+            fetch-depth: 0
+        - uses: actions/setup-node@v3
+          with:
+            cache: 'npm'
+            node-version: '16'
+        - name: Install dependencies
+          run: npm i
+        - name: refresh
+          run: npm run postbuild
+        - run: |
+          git config user.name "Eduardo Parra"
+          git config user.email soker90@users.noreply.github.com
+          git add .
+          git commit -m "Refresh search data"
+          git push
   
