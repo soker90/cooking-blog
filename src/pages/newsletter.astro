@@ -6,10 +6,10 @@ const description = 'Suscríbete para recibir nuevas recetas'
 ---
 <DefaultPageLayout content={{ title, description }} showPageHeader={false}>
   <div class="newsletter">
-    <h3 id="newsletter-page-title">Suscríbete para recibir las nuevas recetas</h3>
+    <h3>Suscríbete para recibir las nuevas recetas</h3>
 
     <form class="form" action="#" method="post" name="revue-form" target="_blank">
-      <input autofocus="" required=""  type="email"  autocomplete="email" placeholder="Introduce aquí tu correo electrónico">
+      <input autofocus="" required=""  type="email"  autocomplete="email" placeholder="Introduce aquí tu correo electrónico...">
       <button class="button" type="submit" >
         <span>¡Suscribirme!</span>
       </button>
@@ -22,6 +22,10 @@ const description = 'Suscríbete para recibir nuevas recetas'
     @apply flex items-center text-5xl font-extrabold text-theme-primary dark:text-theme-dark-primary max-w-full pb-10
   }
   .form input {
-    @apply h-4 p-6 pr-11 text-lg leading-10 rounded border-solid bg-theme-primary
+    @apply h-4 p-6 pr-11 text-lg leading-10 rounded border-solid border-theme-primary focus:outline-none focus:border-theme-secondary transition-all border-2 w-full
+  }
+
+  .form button {
+    @apply w-full bg-theme-primary h-10 leading-10 mt-6 rounded
   }
 </style>
