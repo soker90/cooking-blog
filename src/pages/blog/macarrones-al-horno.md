@@ -3,7 +3,8 @@ layout: $/layouts/post.astro
 title: Macarrones gratinados al horno
 description: "Preparación: 15 min | Tiempo total: 45 min | Raciones: 4"
 tags:
-  - comida pasta
+  - comida
+  - pasta
 author: Eduardo Parra
 authorTwitter: eduparra90
 date: 2022-09-22
