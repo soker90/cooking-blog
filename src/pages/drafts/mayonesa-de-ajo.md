@@ -17,6 +17,7 @@ category: blog
 * 1 cucharadita de sal
 * 1 pellizco de pimienta molida
 * 2 cucharadas de zumo de limón
+* 1 diente de ajo
 
 ## Elaboración en thermomix
 
