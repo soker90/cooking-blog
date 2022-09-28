@@ -1,10 +1,9 @@
 ---
 layout: $/layouts/post.astro
 title: Arroz con cúrcuma
-description: " Preparación: 15 min | Tiempo total: 40 min | Raciones: 1"
+description: "Preparación: 15 min | Tiempo total: 40 min | Raciones: 1"
 tags:
   - arroces
-  - comida
 author: Eduardo Parra
 authorTwitter: eduparra90
 date: 2022-09-29
@@ -23,8 +22,8 @@ category: blog
 
 ## Elaboración
 
-1. Sofreír la cebolla y el ajo
-2. Echar la carne, el arroz, la cúrcuma y remover durante 1 min.
-3. Verter el agua y llevarlo a ebullición.
-4. Echar sal, tapar y cocer a fuego lento durante 25 minutos.
+1. Sofreír la **cebolla** y el **ajo**
+2. Echar la **carne, el arroz, la cúrcuma** y remover durante **1 min** (dependiendo de la carne, puede necesitar cocinarla un poco previamente).
+3. Verter el **agua** y llevarlo a ebullición.
+4. Echar **sal**, tapar y cocer a fuego lento durante 25 minutos.
 5. Servir.
