@@ -23,9 +23,9 @@ date: 2022-10-06
 
 ## Elaboración
 
-1. Calentar el aceite y echar la cebolla y los ajos.
-2. Sofreír unos 5 minutos a fuego no muy fuerte, que no se queme.
-3. Añadir el pimentón, el vino blanco, el agua y la sal. Remover y cuando hierva, echar las almejas.
-4. Dejar unos 12 min y sacar las almejas.
-5. Echar el perejil, el pan y la sal en el caldo. Remover 1 minuto.
+1. Calentar el aceite y echar la **cebolla** y los **ajos**.
+2. Sofreír unos **5 minutos** a fuego no muy fuerte, que no se queme.
+3. Añadir el **pimentón**, el **vino blanco**, el **agua** y la **sal**. Remover y cuando hierva, echar las **almejas**.
+4. Dejar unos **12 min** y sacar las almejas.
+5. Echar el **perejil, el pan y la sal** en el caldo. Remover 1 minuto.
 6. Servir las almejas y echar el caldo por encima.
