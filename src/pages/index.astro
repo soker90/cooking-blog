@@ -6,6 +6,8 @@ import PostPreviewList from '$/components/PostPreviewList.astro'
 const title = 'Inicio'
 const description = 'Mis recetas'
 
+throw new Error('Test codeflow')
+
 const posts = await Astro.glob('./blog/*.md')
 ---
 <DefaultPageLayout content={{ title, description }} showPageHeader={false}>
