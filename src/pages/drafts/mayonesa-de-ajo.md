@@ -1,14 +1,14 @@
 ---
 layout: $/layouts/post.astro
-title: Mayonesa de ajo
+title: Mahonesa de ajo
 description: " Preparación: 2 min | Tiempo total: 5 min | Cantidad: 200 ml"
 tags:
   - salsas
   - thermomix
+category: blog
 author: Eduardo Parra
 authorTwitter: eduparra90
 date: 2022-10-20
-category: blog
 ---
 ## Ingredientes
 
