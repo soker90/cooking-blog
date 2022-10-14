@@ -14,7 +14,7 @@ export async function getStaticPaths({ paginate, rss }) {
     } catch(error) {
         console.log('No se han encontrado borradores de publicaciones al generar la página de índice para las páginas de borrador')
     }
-    const sortedPosts = allPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
+    const sortedPosts = allPosts.sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date));
 
     return paginate(sortedPosts, {
       pageSize: PAGE_SIZE

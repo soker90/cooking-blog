@@ -9,7 +9,7 @@ let description = 'Todas las recetas'
 
 export async function getStaticPaths({ paginate }) {
   const allPosts = await Astro.glob('./*.md');
-  const sortedPosts = allPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
+  const sortedPosts = allPosts.sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date));
 
     return paginate(sortedPosts, {
       pageSize: PAGE_SIZE
