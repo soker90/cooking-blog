@@ -115,7 +115,7 @@ This file is in BETA. Please test and contribute to the discussion:
               <xsl:attribute name="href">
                 <xsl:value-of select="/rss/channel/link"/>
               </xsl:attribute>
-              Visit Website &#x2192;
+              Visitar web &#x2192;
             </a>
           </header>
           <h2>Últimas recetas</h2>
