@@ -49,7 +49,7 @@ date: 2022-11-10
 7. Forrar el molde con papel de horno y untar con mantequilla, añadir la mezcla anterior.
 8. Hornear durante 50-60 minutos (180°C). Retirar del horno y dejar enfriar.
 
-Cobertura
+### Cobertura
 
 1. Poner en un bol el queso para untar y el azúcar glas y mezclar (10 seg vel 5). Reservar.
 2. Poner en un vaso la nata y montarla (con la mariposa, vel 3.5 hasta que se monte).
