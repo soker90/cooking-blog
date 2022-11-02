@@ -14,7 +14,7 @@ date: 2022-11-17
 
 * 200 gr de lentejas (secas)
 * 1 rama de canela
-* Claro (12 o 13)
+* Clavo (12 o 13)
 * 4 huevos talla M (o 3 XL)
 * 90 gr de cacao en polvo
 * ½ sobre de levadura quimica
@@ -28,8 +28,6 @@ date: 2022-11-17
 * Moldes para rosquillas (mejor de silicona)
 
 ## Elaboración
-
-### Bizcocho
 
 1. Cocer 200 gr de lentejas con la canela y el clavo.
 2. Escurrir las lentejas y quitar la canela y el clavo.
