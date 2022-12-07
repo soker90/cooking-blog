@@ -9,6 +9,7 @@ category: blog
 author: Eduardo Parra
 authorTwitter: eduparra90
 date: 2022-11-17
+image: /images/uploads/donettes.jpg
 ---
 ## Ingredientes
 
