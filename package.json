@@ -21,7 +21,7 @@
     "@tailwindcss/line-clamp": "^0.4.2",
     "@tailwindcss/typography": "^0.5.8",
     "@types/node": "^18.11.18",
-    "astro": "^1.9.0",
+    "astro": "^1.9.1",
     "globby": "^13.1.3",
     "gray-matter": "^4.0.3",
     "lunr": "^2.3.9",
