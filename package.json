@@ -12,7 +12,7 @@
   "devDependencies": {
     "@astrojs/mdx": "^0.18.0",
     "@astrojs/rss": "^2.3.0",
-    "@astrojs/sitemap": "^1.2.0",
+    "@astrojs/sitemap": "^1.2.1",
     "@astrojs/svelte": "^2.1.0",
     "@astrojs/tailwind": "^3.1.1",
     "@fontsource/fira-sans": "^4.5.10",
