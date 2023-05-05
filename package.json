@@ -20,7 +20,7 @@
     "@tailwindcss/forms": "^0.5.0",
     "@tailwindcss/line-clamp": "^0.4.4",
     "@tailwindcss/typography": "^0.5.9",
-    "@types/node": "^18.16.3",
+    "@types/node": "^20.0.0",
     "astro": "^2.4.1",
     "globby": "^13.1.4",
     "gray-matter": "^4.0.3",
