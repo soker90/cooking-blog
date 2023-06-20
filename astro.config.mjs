@@ -29,9 +29,7 @@ export default /** @type {import('astro').AstroUserConfig} */ ({
     mdx(),
     svelte(),
     tailwind({
-        config: {
-            applyBaseStyles: false
-        },
+      applyBaseStyles: false,
     }),
     sitemap()
   ],
