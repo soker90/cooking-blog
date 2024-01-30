@@ -1,6 +1,6 @@
 {
-  "name": "astro-ink",
-  "version": "1.0.1",
+  "name": "cooking-blog",
+  "version": "1.0.2",
   "private": true,
   "scripts": {
     "dev": "THEME_KEY=ambersky astro dev",
