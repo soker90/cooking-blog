@@ -23,6 +23,7 @@ date: 2024-01-30
 
 ## Elaboración
 
-1. Calentar la leche sin que llegue a hervir
-2. Añadir la maicena, la miel y el café.
+1. Calentar la leche sin que llegue a hervir **(modo hervidor a 70 ºC)**.
+2. Añadir la maicena, la miel, el café y mezclar hasta que espese **(8 min 80°C vel 4)**.
 3. Verter la mezcla en el molde y dejar enfriar al menos 4 horas en el frigorífico.
+4. Desmoldar y espolvorear cacao al gusto por encima.
