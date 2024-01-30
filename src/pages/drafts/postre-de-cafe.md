@@ -8,6 +8,7 @@ category: blog
 author: Eduardo Parra
 authorTwitter: _eduparra
 date: 2024-01-30
+image: /images/uploads/postre-cafe.webp
 ---
 ## Ingredientes
 
