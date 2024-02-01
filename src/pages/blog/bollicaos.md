@@ -16,7 +16,7 @@ image: /images/uploads/bollicaos.webp
 ### Relleno
 
 * 100 g de dátiles sin hueso cortados por la mitad
-* 150 g de bebida de soja
+* 150 g de leche
 * 125 g de avellanas tostadas
 * 1 pellizco de sal
 * 100 g de chocolate negro (85% de cacao) en trozos
