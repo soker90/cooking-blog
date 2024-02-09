@@ -30,9 +30,9 @@ image: /images/uploads/donettes.jpg
 
 ## Elaboración
 
-1. Cocer 200 gr de lentejas con la canela y el clavo.
+1. Cocer 200 gr de lentejas (secas, sin ponerlas a remojo) con la canela y el clavo.
 2. Escurrir las lentejas y quitar la canela y el clavo.
 3. Echar en un bol, las lentejas, los huevos, el cacao, la levadura, la sal y la miel y triturar todo. **(Función triturar vel 6.5)**
-4. Echar la mezcla en un bol, y añadir las pepitas de chocolate por encima.
+4. Echar la mezcla en un molde, y añadir las pepitas de chocolate por encima.
 5. Hornear **20 min a 180 ºC** (con el horno previamente precalentado).
 6. Dejar enfriar los donettes y recubrir los donettes con el chocolate derretido.
