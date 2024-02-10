@@ -8,6 +8,7 @@ category: blog
 author: Eduardo Parra
 authorTwitter: _eduparra
 date: 2024-02-10
+image: /images/uploads/cheesecake-dinosaurios.webp
 ---
 ## Ingredientes
 
