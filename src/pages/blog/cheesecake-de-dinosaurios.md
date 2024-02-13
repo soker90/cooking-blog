@@ -1,6 +1,6 @@
 ---
 layout: $/layouts/post.astro
-title: Cheesecake de dinosaurios
+title: Tarta de queso de dinosaurios
 description: " Preparación: 5 min | Tiempo total: 50 min | Raciones: 4 raciones "
 tags:
   - tarta
