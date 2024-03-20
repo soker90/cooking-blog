@@ -6,7 +6,7 @@ tags:
   - thermomix
 category: blog
 author: Eduardo Parra
-authorTwitter: eduparra90
+authorTwitter: _eduparra
 date: 2022-10-27
 image: /images/uploads/photo_2022-09-12_23-59-42.jpg
 ---

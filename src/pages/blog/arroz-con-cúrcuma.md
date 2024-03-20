@@ -5,7 +5,7 @@ description: "Preparación: 15 min | Tiempo total: 40 min | Raciones: 1"
 tags:
   - arroces
 author: Eduardo Parra
-authorTwitter: eduparra90
+authorTwitter: _eduparra
 date: 2022-09-29
 image: /images/uploads/img_20180421_151543.jpg
 category: blog

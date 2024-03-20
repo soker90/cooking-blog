@@ -5,7 +5,7 @@ description: "Preparación: 10 min | Tiempo total: 28 min | Raciones: 2"
 tags:
   - pescado
 author: Eduardo Parra
-authorTwitter: eduparra90
+authorTwitter: _eduparra
 date: 2022-10-06
 ---
 ## Ingredientes

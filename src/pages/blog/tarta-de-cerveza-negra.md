@@ -7,7 +7,7 @@ tags:
   - tartas
 category: blog
 author: Eduardo Parra
-authorTwitter: eduparra90
+authorTwitter: _eduparra
 date: 2022-11-10
 ---
 ## Ingredientes

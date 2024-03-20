@@ -5,7 +5,7 @@ tags:
   - tartas
   - postres
 author: Eduardo Parra
-authorTwitter: eduparra90
+authorTwitter: _eduparra
 date: 2022-09-10
 image: /images/uploads/001-Tarta-crema-de-orujo.jpg
 description: " Preparación: 30 min | Tiempo total: 5h 30 min | Raciones: 8"

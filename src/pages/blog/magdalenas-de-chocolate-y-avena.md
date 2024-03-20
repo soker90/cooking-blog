@@ -5,7 +5,7 @@ description: "Preparación: 10 min | Tiempo total: 30 min | Raciones: 4"
 tags:
   - desayuno
 author: Eduardo Parra
-authorTwitter: eduparra90
+authorTwitter: _eduparra
 date: 2022-11-03
 image: /images/uploads/photo_2022-09-24_00-42-14.jpg
 ---

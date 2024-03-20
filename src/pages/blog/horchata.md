@@ -6,7 +6,7 @@ tags:
   - bebidas
 category: blog
 author: Eduardo Parra
-authorTwitter: eduparra90
+authorTwitter: _eduparra
 date: 2022-11-24
 image: /images/uploads/img_20221030_122749.jpg
 ---

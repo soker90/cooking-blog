@@ -6,7 +6,7 @@ tags:
   - comida
   - pasta
 author: Eduardo Parra
-authorTwitter: eduparra90
+authorTwitter: _eduparra
 date: 2022-09-22
 category: blog
 ---

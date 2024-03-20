@@ -5,7 +5,7 @@ description: "Preparación: 24 min | Tiempo total: 30 min | Raciones: 3"
 tags:
   - sopas
 author: Eduardo Parra
-authorTwitter: eduparra90
+authorTwitter: _eduparra
 date: 2022-09-15
 category: blog
 ---

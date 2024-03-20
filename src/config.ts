@@ -16,7 +16,6 @@ export const NAV_ITEMS: NavItems = {
 }
 
 export const SITE = {
-    // Your site's detail?
     name: 'Cocina con Edu',
     title: 'Cocina con Edu',
     description: 'Las recetas de Edu',

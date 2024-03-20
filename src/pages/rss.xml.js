@@ -4,6 +4,8 @@ import { SITE } from '../config'
 const allPosts = import.meta.glob('./blog/*.md', { eager: true })
 const sortedPosts = Object.values(allPosts).sort((a, b) => new Date(b.date) - new Date(a.date));
 
+console.log(sortedPosts.map(i => JSON.stringify(i, null, 2)))
+
 export const get = () => rss({
     // `<title>` field in output xml
     title: `${SITE.name}`,
@@ -20,6 +22,7 @@ export const get = () => rss({
         description: item.frontmatter.description,
         link: item.url,
         pubDate: item.frontmatter.date,
+        image: `${SITE.url}${item.frontmatter.image}`,
     })),
     // (optional) inject custom xml
     customData: `<language>es-es</language>`,
