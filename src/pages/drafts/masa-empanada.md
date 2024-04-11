@@ -1,12 +1,12 @@
 ---
 layout: $/layouts/post.astro
 title: Masa de empanada
-description: "Preparación: 20 min | Tiempo total: 3 h 30 min | Raciones: 16 "
+description: "Preparación: 5 min | Tiempo total: 35 min | Raciones: 16 "
 tags:
   - masas
 category: blog
 author: Eduardo Parra
-authorTwitter: _eduparra_
+authorTwitter: _eduparra
 date: 2024-03-20
 ---
 ## Ingredientes
