@@ -16,13 +16,13 @@ date: 2022-11-10
 
 * 140 ml de nata para montar
 * 2 cucharadas de limón
-* 250 ml de cerveza
+* 250 ml de cerveza negra guiness
 * 250 gr de mantequilla en pomada
 * 75 gr de cacao en polvo
 * 400 gr de azúcar moreno
 * 2 huevos talla M
-* Una cucharada de extracto de vainilla
-* 275 g de harina de repostería
+* Una cucharadita de extracto de vainilla
+* 250 g de harina de repostería
 * 2 ½ cucharaditas de bicarbonato sódico
 
 ### Cobertura
