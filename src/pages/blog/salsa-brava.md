@@ -3,7 +3,8 @@ layout: $/layouts/post.astro
 title: Salsa brava
 description: "Preparación: 3 min | Tiempo total: 18 min | Raciones: 4"
 tags:
-  - blog
+  - salsas
+  - thermomix
 category: blog
 author: Eduardo Parra
 authorTwitter: _eduparra

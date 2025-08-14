@@ -3,7 +3,8 @@ layout: $/layouts/post.astro
 title: Zanahorias glaseadas
 description: "Preparación: 5 min | Tiempo total: 40 min | Raciones: 4"
 tags:
-  - blog
+  - guarniciones
+  - thermomix
 category: blog
 author: Eduardo Parra
 authorTwitter: _eduparra
