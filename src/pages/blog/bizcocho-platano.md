@@ -1,6 +1,6 @@
 ---
 layout: $/layouts/post.astro
-title: Tarta de requesón
+title: Bizcocho de plátano
 tags:
   - bizcocho
   - postres
