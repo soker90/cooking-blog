@@ -6,7 +6,7 @@ const sortedPosts = Object.values(allPosts).sort(
   (a, b) => new Date(b.date) - new Date(a.date)
 );
 
-export const get = () =>
+export const GET = () =>
   rss({
     // `<title>` field in output xml
     title: `${SITE.name}`,
