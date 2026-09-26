@@ -11,7 +11,6 @@ const __dirname = dirname(__filename)
 // @ts-check
 export default /** @type {import('astro').AstroUserConfig} */ ({
   site: 'https://recetas.eduardoparra.es/',
-  server: {},
   integrations: [
     mdx(),
     svelte(),
@@ -24,8 +23,5 @@ export default /** @type {import('astro').AstroUserConfig} */ ({
         '$': path.resolve(__dirname, './src'),
       },
     },
-    optimizeDeps: {
-      allowNodeBuiltins: true
-    }
   }
 });
