@@ -3,6 +3,7 @@ import { SITE } from '$/config'
 import MainLayout from '$/components/MainLayout.astro'
 import BaseHead from '$/components/BaseHead.astro'
 import Prose from '$/components/Prose.astro'
+import OptimizedImage from '$/components/OptimizedImage.astro'
 
 const { content } = Astro.props
 ---
@@ -26,7 +27,7 @@ const { content } = Astro.props
         <div class="draft-message">
             Estás viendo una versión <strong>preliminar </strong> de <code>/blog/{content.slug}</code> la cuál no está publicada todavía.
         </div>
-        {content.image && <img src={content.image} alt={content.title} decoding="async" />}
+        {content.image && <OptimizedImage src={content.image} alt={content.title} />}
         <Prose>
             <slot />
         </Prose>
