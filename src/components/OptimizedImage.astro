@@ -28,7 +28,7 @@ const responsiveWidths = width
 const hasOptimizedVariants = optimizable && responsiveWidths.length > 0
 const avifSrcset = responsiveWidths.map(candidate => `${optimizedBase}-${candidate}.avif ${candidate}w`).join(', ')
 const webpSrcset = responsiveWidths.map(candidate => `${optimizedBase}-${candidate}.webp ${candidate}w`).join(', ')
-const sizes = '(min-width: 1024px) 1024px, calc(100vw - 2rem)'
+const sizes = '(min-width: 56rem) 896px, calc(100vw - 2rem)'
 ---
 {hasOptimizedVariants ? (
     <picture>
