@@ -67,7 +67,7 @@ const recipeSchema = content.image && recipeIngredient.length && recipeInstructi
             <p class="post__desc_content">{content.description}</p>    
         </div>
         
-        {content.image && <img src={content.image} alt={content.title} />}
+        {content.image && <img src={content.image} alt={content.title} decoding="async" fetchpriority="high" />}
         <Prose>
             <slot />
         </Prose>
