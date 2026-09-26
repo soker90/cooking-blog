@@ -1,4 +1,8 @@
 ---
+import fs from 'node:fs'
+import path from 'node:path'
+import sharp from 'sharp'
+
 export type Props = {
     src: string
     alt: string
@@ -10,13 +14,18 @@ const optimizable = /^\/images\/uploads\/[^/]+\.jpe?g$/i.test(src)
 const filename = src.split('/').pop() ?? ''
 const base = filename.replace(/\.jpe?g$/i, '')
 const optimizedBase = `/images/optimized/${base}`
+
+const imagePath = path.join(process.cwd(), 'public', src.replace(/^\//, ''))
+const metadata = fs.existsSync(imagePath) ? await sharp(imagePath).metadata() : {}
+const width = metadata.width
+const height = metadata.height
 ---
 {optimizable ? (
     <picture>
         <source srcset={`${optimizedBase}.avif`} type="image/avif" />
         <source srcset={`${optimizedBase}.webp`} type="image/webp" />
-        <img src={src} alt={alt} decoding="async" fetchpriority={fetchpriority} />
+        <img src={src} alt={alt} width={width} height={height} decoding="async" fetchpriority={fetchpriority} />
     </picture>
 ) : (
-    <img src={src} alt={alt} decoding="async" fetchpriority={fetchpriority} />
+    <img src={src} alt={alt} width={width} height={height} decoding="async" fetchpriority={fetchpriority} />
 )}
