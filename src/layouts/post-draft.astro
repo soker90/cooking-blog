@@ -26,7 +26,7 @@ const { content } = Astro.props
         <div class="draft-message">
             Estás viendo una versión <strong>preliminar </strong> de <code>/blog/{content.slug}</code> la cuál no está publicada todavía.
         </div>
-        {content.image && <img src={content.image} alt={content.title} />}
+        {content.image && <img src={content.image} alt={content.title} decoding="async" />}
         <Prose>
             <slot />
         </Prose>
