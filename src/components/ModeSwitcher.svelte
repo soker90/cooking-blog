@@ -1,22 +1,17 @@
 <script lang="ts">
     import { onMount } from 'svelte'
-    import { theme } from '../store/theme'
 
     type ThemeType = 'dark' | 'light'
 
-    const THEME_DARK: ThemeType =  'dark'
-    const THEME_LIGHT: ThemeType =  'light'
+    const THEME_DARK: ThemeType = 'dark'
+    const THEME_LIGHT: ThemeType = 'light'
     let currTheme: ThemeType = THEME_DARK
-
 
     function toggleTheme() {
         window.document.documentElement.classList.toggle(THEME_DARK)
         currTheme = localStorage.getItem('theme') === THEME_DARK ? THEME_LIGHT : THEME_DARK
-        // Update Storage
         localStorage.setItem('theme', currTheme)
         document.documentElement.style.colorScheme = currTheme
-        // Update Store
-        theme.set(currTheme)
     }
 
     onMount(() => {
@@ -27,8 +22,6 @@
             window.document.documentElement.classList.remove(THEME_DARK)
             currTheme = THEME_LIGHT
         }
-        // Update Store
-        theme.set(currTheme)
     })
 </script>
 <button type="button" aria-label={currTheme === THEME_DARK ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'} on:click={toggleTheme}>
