@@ -1,14 +1,15 @@
-@tailwind base;
-/* https://github.com/tailwindlabs/tailwindcss/discussions/2917 */
+@import "tailwindcss";
+@config "../../tailwind.config.cjs";
+@plugin "@tailwindcss/typography";
+@plugin "@tailwindcss/forms";
+
 @layer base {
-	body {
-		&.dark {
-			@apply text-gray-200;
-            header, footer {
-                @apply text-gray-400 border-gray-700;
-            }
-		}
-	}
+  body {
+    &.dark {
+      @apply text-gray-200;
+      header, footer {
+        @apply text-gray-400 border-gray-700;
+      }
+    }
+  }
 }
-@tailwind components;
-@tailwind utilities;
