@@ -6,8 +6,17 @@ const title = 'Inicio'
 const description = 'Mis recetas'
 
 const posts = Object.values(import.meta.glob('./blog/*.md', { eager: true }))
+const recipeListSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    itemListElement: posts.map((post, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        url: new URL(post.url, 'https://recetas.eduardoparra.es').href
+    }))
+}
 ---
-<DefaultPageLayout content={{ title, description }} showPageHeader={false}>
+<DefaultPageLayout content={{ title, description }} showPageHeader={false}>\n    <script type="application/ld+json" set:html={JSON.stringify(recipeListSchema)} />
     <PostPreviewList posts={posts} />
     <div class="page__actions">
         <a class="action__go-to-blog" href="/blog" title="Todas">Todas &rarr;</a>
