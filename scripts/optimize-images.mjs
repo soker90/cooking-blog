@@ -18,6 +18,7 @@ for (const file of files) {
     const base = file.replace(/\.jpe?g$/i, '')
     const metadata = await sharp(input).metadata()
     const sourceWidth = metadata.width ?? 0
+    const pipeline = sharp(input)
     const targetWidths = widths.filter(width => width < sourceWidth)
 
     if (sourceWidth > 0 && sourceWidth <= 1600) {
@@ -27,8 +28,8 @@ for (const file of files) {
     targetWidths.sort((a, b) => a - b)
 
     await Promise.all(targetWidths.flatMap(width => [
-        sharp(input).resize({ width, withoutEnlargement: true }).avif({ quality: 50, effort: 4 }).toFile(path.join(outputDir, `${base}-${width}.avif`)),
-        sharp(input).resize({ width, withoutEnlargement: true }).webp({ quality: 75, effort: 4 }).toFile(path.join(outputDir, `${base}-${width}.webp`))
+        pipeline.clone().resize({ width, withoutEnlargement: true }).avif({ quality: 50, effort: 4 }).toFile(path.join(outputDir, `${base}-${width}.avif`)),
+        pipeline.clone().resize({ width, withoutEnlargement: true }).webp({ quality: 75, effort: 4 }).toFile(path.join(outputDir, `${base}-${width}.webp`))
     ]))
 }
 
