@@ -28,6 +28,7 @@
     <hr class="my-4 text-theme-dark-secondary"/>
 {/if}
 <style lang="postcss">
+    @reference "../styles/global.css";
     .post-preview {
         @apply  flex gap-6 text-left;
     }
