@@ -11,9 +11,9 @@
 </script>
 <div class="post-preview hover:bg-theme-primary">
     <div class="flex-1">
-        <h4 class="post-preview__title">
+        <h2 class="post-preview__title">
             <a href={`/${post.category}/${post.slug}`} title={post.title}>{post.title} &rarr;</a>
-        </h4>
+        </h2>
         <p class="post-preview__desc">
             {post.description}
         </p>
