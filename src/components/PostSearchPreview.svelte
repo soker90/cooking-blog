@@ -19,7 +19,7 @@
         </p>
         <ul class="tag-list">
             {#each post.tags as tag}
-                <a class="tag" href={`/tags/${tag}`} title={tag}>{tag}</a>
+                <li><a class="tag" href={`/tags/${tag}`} title={tag}>{tag}</a></li>
             {/each}
         </ul>
     </div>
