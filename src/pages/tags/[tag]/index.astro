@@ -10,7 +10,7 @@ export async function getStaticPaths({ }) {
   })
 
   return Array.from(allTags).map((tag) => {
-    const filteredPosts = allPosts.filter((post) => post.frontmatter.tags.includes(tag))
+    const filteredPosts = allPosts.filter((post) => post.frontmatter.tags.some(existingTag => existingTag.toLowerCase() === tag))
     return {
       params: { tag },
       props: {
