@@ -5,12 +5,10 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @layer base {
-  body {
-    &.dark {
-      @apply text-gray-200;
-      header, footer {
-        @apply text-gray-400 border-gray-700;
-      }
+  html.dark body {
+    @apply text-gray-200;
+    header, footer {
+      @apply text-gray-400 border-gray-700;
     }
   }
 }
