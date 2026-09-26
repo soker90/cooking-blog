@@ -12,6 +12,16 @@
 
     const { title = SITE.title , description, permalink, image } = Astro.props as Props
 ---
+    <script is:inline>
+        (() => {
+            const savedTheme = localStorage.getItem('theme')
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+            const isDark = savedTheme === 'dark' || (!savedTheme && prefersDark)
+            document.documentElement.classList.toggle('dark', isDark)
+            document.documentElement.style.colorScheme = isDark ? 'dark' : 'light'
+        })()
+    </script>
+
     <!-- Use Google Fonts, if you don't wanna prefer a self-hosted version -->
     <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
