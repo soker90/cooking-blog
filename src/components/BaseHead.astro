@@ -10,7 +10,8 @@
     }
 
     const { title = SITE.title , description, permalink, image } = Astro.props as Props
-    const canonicalUrl = permalink || Astro.url.href
+    const canonicalUrl = permalink ? new URL(permalink, SITE.url).href : Astro.url.href
+    const socialImageUrl = image ? new URL(image, SITE.url).href : undefined
 ---
     <script is:inline>
         (() => {
@@ -54,7 +55,7 @@
         <meta property="og:description" content={description} />
     }
     {image &&
-        <meta property="og:image" content={image} />
+        <meta property="og:image" content={socialImageUrl} />
     }
 
     <!-- Twitter -->

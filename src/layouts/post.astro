@@ -52,7 +52,7 @@ const recipeSchema = content.image && recipeIngredient.length && recipeInstructi
 <!doctype html>
 <html lang="es">
     <head>
-        <BaseHead title={ content.title ? `${ SITE.title } | ${content.title}` : SITE.title } description={ content.description }/>
+        <BaseHead title={ content.title ? `${ SITE.title } | ${content.title}` : SITE.title } description={ content.description } permalink={url} image={content.image} />
         {recipeSchema && <script type="application/ld+json" set:html={JSON.stringify(recipeSchema)} />}
     </head>
     <MainLayout>
