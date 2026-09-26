@@ -10,12 +10,15 @@
     let searchQuery = ''
     let searchResults = []
 
-    onMount(async() => {
-        const lunr = (await import('lunr')).default
-        const resp = await fetch('/search-index.json')
-        searchableDocs = await resp.json()
+    onMount(() => {
+        let isMounted = true
+
+        const loadSearch = async() => {
+            const lunr = (await import('lunr')).default
+            const resp = await fetch('/search-index.json')
+            searchableDocs = await resp.json()
             // Initialize indexing
-        searchIndex = lunr(function(){
+            searchIndex = lunr(function(){
             // the match key...
             this.ref('slug')
 
@@ -28,11 +31,20 @@
             this.field('body')
 
             // Index every document
-            searchableDocs.forEach(doc => {
-                this.add(doc)
-            }, this)
-        })
-        searchInput.focus()
+                searchableDocs.forEach(doc => {
+                    this.add(doc)
+                }, this)
+            })
+            if (isMounted) {
+                searchInput?.focus()
+            }
+        }
+
+        loadSearch()
+
+        return () => {
+            isMounted = false
+        }
     })
 
     $: {
