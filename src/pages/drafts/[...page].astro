@@ -8,12 +8,7 @@ let title = 'Borradores'
 let description = 'Estas viendo una lista de las recetas no publicadas. Pueden no es estar terminadas o con errores...'
 
 export async function getStaticPaths({ paginate, rss }) {
-    let allPosts = []
-    try {
-        allPosts = await Astro.glob('./*.md');
-    } catch(error) {
-        console.log('No se han encontrado borradores de publicaciones al generar la página de índice para las páginas de borrador')
-    }
+    const allPosts = Object.values(import.meta.glob('./*.md', { eager: true }))
     const sortedPosts = allPosts.sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date));
 
     return paginate(sortedPosts, {
