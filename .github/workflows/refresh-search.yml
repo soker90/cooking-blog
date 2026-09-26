@@ -28,5 +28,5 @@ jobs:
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: Refresh search data
-          file_pattern: 'public/search-index.json package-lock.json'
+          file_pattern: 'public/search-index.json'
   
