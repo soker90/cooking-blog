@@ -11,7 +11,7 @@ jobs:
   publish-drafts:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: SSG Publish Drafts
         uses: one-aalam/github-action-astro-publish-drafts@v0.1-beta
         with:
