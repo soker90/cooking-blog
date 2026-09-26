@@ -14,6 +14,7 @@
         currTheme = localStorage.getItem('theme') === THEME_DARK ? THEME_LIGHT : THEME_DARK
         // Update Storage
         localStorage.setItem('theme', currTheme)
+        document.documentElement.style.colorScheme = currTheme
         // Update Store
         theme.set(currTheme)
     }
