@@ -1,15 +1,15 @@
 ---
+import type { MarkdownInstance } from 'astro'
 import { getSlugFromPathname } from '$/utils'
 
 import PostDraftPageLayout from '$/layouts/post-draft.astro'
 
 export async function getStaticPaths({ }) {
-    const allPosts = Object.values(import.meta.glob('../../../drafts/*.md', { eager: true }))
+    const allPosts = Object.values(import.meta.glob<MarkdownInstance<Record<string, unknown>>>('../../../drafts/*.md', { eager: true }))
     const allSlugs = new Set()
     const allPostsWithSlug = allPosts.map(post => {
-        // @ts-ignore
-        const slug = getSlugFromPathname(post.file)
-        allSlugs.add(slug.toLowerCase())
+        const slug = getSlugFromPathname(post.file).toLowerCase()
+        allSlugs.add(slug)
         return {
             ...post,
             slug
