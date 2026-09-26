@@ -4,12 +4,7 @@ import { getSlugFromPathname } from '$/utils'
 import PostDraftPageLayout from '$/layouts/post-draft.astro'
 
 export async function getStaticPaths({ }) {
-    let allPosts = []
-    try {
-        allPosts = await Astro.glob('../../../drafts/*.md')
-    } catch(error) {
-        console.log('No se encontraron borradores de publicaciones al generar las páginas de borrador')
-    }
+    const allPosts = Object.values(import.meta.glob('../../../drafts/*.md', { eager: true }))
     const allSlugs = new Set()
     const allPostsWithSlug = allPosts.map(post => {
         // @ts-ignore

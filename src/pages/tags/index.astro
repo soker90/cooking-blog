@@ -4,8 +4,7 @@ import DefaultPageLayout from '$/layouts/default.astro'
 let title = 'Categorías'
 let description = 'Todas las categorías usadas'
 
-
-const allPosts = await Astro.glob('../blog/*.md');
+const allPosts = Object.values(import.meta.glob('../blog/*.md', { eager: true }));
 const tags = [...new Set([].concat.apply([], allPosts.map(post => post.frontmatter.tags)))]
 ---
 
