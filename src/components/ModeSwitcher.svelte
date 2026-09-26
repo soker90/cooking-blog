@@ -12,6 +12,7 @@
         currTheme = localStorage.getItem('theme') === THEME_DARK ? THEME_LIGHT : THEME_DARK
         localStorage.setItem('theme', currTheme)
         document.documentElement.style.colorScheme = currTheme
+        document.querySelector<HTMLMetaElement>('#theme-color')?.setAttribute('content', currTheme === THEME_DARK ? '#1f2937' : '#f3f4f6')
     }
 
     onMount(() => {
