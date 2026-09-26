@@ -32,11 +32,12 @@
 
         const firstElement = focusableElements[0]
         const lastElement = focusableElements[focusableElements.length - 1]
+        const focusIsOutsideDialog = !dialog?.contains(document.activeElement)
 
-        if (event.shiftKey && document.activeElement === firstElement) {
+        if (event.shiftKey && (document.activeElement === firstElement || focusIsOutsideDialog)) {
             event.preventDefault()
             lastElement.focus()
-        } else if (!event.shiftKey && document.activeElement === lastElement) {
+        } else if (!event.shiftKey && (document.activeElement === lastElement || focusIsOutsideDialog)) {
             event.preventDefault()
             firstElement.focus()
         }
