@@ -14,7 +14,7 @@ const { content, showPageHeader = true } = Astro.props
         {showPageHeader &&
             <div class="page__header">
                 <h1 class="page__title">{content.title}</h1>
-                <h5 class="page__desc">{content.description}</h5>
+                <p class="page__desc">{content.description}</p>
             </div>
         }
         <slot />
