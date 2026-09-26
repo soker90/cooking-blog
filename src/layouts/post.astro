@@ -4,12 +4,55 @@ import MainLayout from '$/components/MainLayout.astro'
 import BaseHead from '$/components/BaseHead.astro'
 import Prose from '$/components/Prose.astro'
 
-const { content } = Astro.props
+const { content, rawContent, url } = Astro.props
+
+const parseDuration = (value: string | undefined) => {
+    if (!value) return undefined
+    const hours = value.match(/(\d+)\s*h/i)?.[1]
+    const minutes = value.match(/(\d+)\s*min/i)?.[1]
+    if (!hours && !minutes) return undefined
+    return `PT${hours ? `${hours}H` : ''}${minutes ? `${minutes}M` : ''}`
+}
+
+const recipeDescription = content.description?.trim() ?? ''
+const prepTime = parseDuration(recipeDescription.match(/Preparación:\s*([^|]+)/i)?.[1])
+const totalTime = parseDuration(recipeDescription.match(/Tiempo total:\s*([^|]+)/i)?.[1])
+const recipeYield = recipeDescription.match(/Raciones:\s*(\d+)/i)?.[1]
+
+const markdown = typeof rawContent === 'function' ? rawContent().replace(/^---[\s\S]*?---\s*/m, '') : ''
+const ingredientsSection = markdown.match(/##\s+Ingredientes\b([\s\S]*?)(?=^##\s|$)/im)?.[1] ?? ''
+const instructionsSection = markdown.match(/##\s+Elaboración\b([\s\S]*?)(?=^##\s|$)/im)?.[1] ?? ''
+const recipeIngredient = ingredientsSection.split('\n').filter(line => /^\s*-\s+/.test(line)).map(line => line.replace(/^\s*-\s+/, '').trim()).filter(Boolean)
+const recipeInstructions = instructionsSection.split('\n').map(line => line.match(/^\s*\d+[.)]\s+(.+)/)?.[1]?.trim()).filter((step): step is string => Boolean(step)).map((text, index) => ({
+    '@type': 'HowToStep',
+    name: `Paso ${index + 1}`,
+    text
+}))
+
+const recipeSchema = content.image && recipeIngredient.length && recipeInstructions.length
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'Recipe',
+        name: content.title,
+        image: new URL(content.image, SITE.url).href,
+        author: { '@type': 'Person', name: content.author },
+        datePublished: new Date(content.date).toISOString().slice(0, 10),
+        description: content.description?.trim(),
+        url: new URL(url, SITE.url).href,
+        keywords: content.tags?.join(', '),
+        ...(prepTime ? { prepTime } : {}),
+        ...(totalTime ? { totalTime } : {}),
+        ...(recipeYield ? { recipeYield } : {}),
+        recipeIngredient,
+        recipeInstructions
+    }
+    : null
 ---
 <!doctype html>
 <html lang="es">
     <head>
         <BaseHead title={ content.title ? `${ SITE.title } | ${content.title}` : SITE.title } description={ content.description }/>
+        {recipeSchema && <script type="application/ld+json" set:html={JSON.stringify(recipeSchema)} />}
     </head>
     <MainLayout>
         <div class="post__header">
