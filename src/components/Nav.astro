@@ -4,7 +4,7 @@ import { NAV_ITEMS } from '$/config'
 
 const isCurrentPage = (path: string) => Astro.url.pathname === path || (path !== '/' && Astro.url.pathname.startsWith(`${path}/`))
 ---
-<nav class="nav py-3">
+<nav class="nav py-3" aria-label="Principal">
     <ul class="nav-list dark:text-theme-dark-secondary">
          {
             Object.keys(NAV_ITEMS).map(navItemKey => <li>
