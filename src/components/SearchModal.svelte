@@ -4,7 +4,12 @@
     import Search from './Search.svelte'
 
     const dismissModal = () => isSearchVisible.set(false)
+
+    const handleKeydown = (event: KeyboardEvent) => {
+        if (event.key === 'Escape') dismissModal()
+    }
 </script>
+<svelte:window on:keydown={handleKeydown} />
 {#if $isSearchVisible}
     <button type="button" class="modal__backdrop" aria-label="Cerrar búsqueda" on:click={dismissModal} transition:fade></button>
     <div class="modal" role="dialog" aria-modal="true" aria-label="Buscar recetas">
