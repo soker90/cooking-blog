@@ -20,6 +20,7 @@
     </div>
 {/if}
 <style>
+    @reference "../styles/global.css";
     .modal {
         @apply absolute top-0 left-0 w-full h-full grid justify-center content-center pointer-events-none;
     }
