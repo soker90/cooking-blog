@@ -36,7 +36,7 @@
     })
 
     $: {
-        if(searchQuery && searchQuery.length >= 3) {
+        if(searchQuery && searchQuery.length >= 3 && searchIndex && searchableDocs) {
            const matches = searchIndex.search(searchQuery)
            searchResults = []
            matches.map(match => {
