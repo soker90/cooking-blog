@@ -36,16 +36,18 @@
     })
 
     $: {
-        if(searchQuery && searchQuery.length >= 3 && searchIndex && searchableDocs) {
-           const matches = searchIndex.search(searchQuery)
-           searchResults = []
-           matches.map(match => {
-               searchableDocs.filter(doc => {
+        if(searchQuery.length >= 3 && searchIndex && searchableDocs) {
+            const matches = searchIndex.search(searchQuery)
+            searchResults = []
+            matches.map(match => {
+                searchableDocs.filter(doc => {
                     if(match.ref === doc.slug) {
                         searchResults.push(doc)
                     }
-               })
-           })
+                })
+            })
+        } else {
+            searchResults = []
         }
     }
 </script>
