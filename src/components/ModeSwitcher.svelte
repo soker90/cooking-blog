@@ -31,6 +31,6 @@
         theme.set(currTheme)
     })
 </script>
-<button on:click={toggleTheme}>
+<button type="button" aria-label={currTheme === THEME_DARK ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'} on:click={toggleTheme}>
     <slot theme={currTheme}/>
 </button>
