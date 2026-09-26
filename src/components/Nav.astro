@@ -1,12 +1,14 @@
 ---
 import { toTitleCase } from '$/utils'
 import { NAV_ITEMS } from '$/config'
+
+const isCurrentPage = (path: string) => Astro.url.pathname === path || (path !== '/' && Astro.url.pathname.startsWith(`${path}/`))
 ---
 <nav class="nav py-3">
     <ul class="nav-list dark:text-theme-dark-secondary">
          {
             Object.keys(NAV_ITEMS).map(navItemKey => <li>
-                <a class="hover:underline" href={NAV_ITEMS[navItemKey].path} title={NAV_ITEMS[navItemKey].title}>{toTitleCase(NAV_ITEMS[navItemKey].title)}</a>
+                <a class="hover:underline" href={NAV_ITEMS[navItemKey].path} title={NAV_ITEMS[navItemKey].title} aria-current={isCurrentPage(NAV_ITEMS[navItemKey].path) ? "page" : undefined}>{toTitleCase(NAV_ITEMS[navItemKey].title)}</a>
             </li>)
         }
     </ul>
