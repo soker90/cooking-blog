@@ -15,6 +15,7 @@ const posts = Object.values(import.meta.glob('./blog/*.md', { eager: true }))
 </DefaultPageLayout>
 
 <style>
+    @reference "../styles/global.css";
     .page__actions {
         @apply flex justify-center md:justify-end py-6
     }

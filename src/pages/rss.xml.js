@@ -1,10 +1,10 @@
 import rss from "@astrojs/rss";
 import { SITE } from "../config";
 
-const allPosts = import.meta.glob("./blog/*.md", { eager: true });
-const sortedPosts = Object.values(allPosts).sort(
-  (a, b) => new Date(b.date) - new Date(a.date)
-);
+const allPosts = Object.values(import.meta.glob("./blog/*.md", { eager: true }));
+const typedPosts = /** @type {any[]} */ (allPosts);
+
+const sortedPosts = typedPosts.sort((a, b) => new Date(a.frontmatter.date).getTime() - new Date(b.frontmatter.date).getTime());
 
 export const GET = () =>
   rss({

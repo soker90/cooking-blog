@@ -72,6 +72,7 @@
     <div class="note"><small>Pulsa en cualquier sitio para cerrar la búsqueda</small></div>
 </div>
 <style>
+    @reference "../styles/global.css";
     .search {
         @apply w-full relative bg-theme-primary  p-8  rounded-md shadow-lg;
     }
