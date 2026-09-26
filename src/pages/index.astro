@@ -18,6 +18,7 @@ const recipeListSchema = {
 }
 ---
 <DefaultPageLayout content={{ title, description }} showPageHeader={false}>
+    <h1 class="sr-only">{title}</h1>
     <script type="application/ld+json" set:html={JSON.stringify(recipeListSchema).replace(/</g, '\\u003c')} />
     <PostPreviewList posts={posts} />
     <div class="page__actions">
