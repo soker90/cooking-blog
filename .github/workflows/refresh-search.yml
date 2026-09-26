@@ -7,6 +7,7 @@ on:
   pull_request:
     branches: [ master ]
 
+  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
 jobs:
@@ -18,6 +19,7 @@ jobs:
           fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
+          cache: 'npm'
           node-version-file: ".nvmrc"
       - name: Install dependencies
         run: npm i
@@ -26,4 +28,5 @@ jobs:
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: Refresh search data
-          file_pattern: 'public/search-index.json package-lock.json'
+          file_pattern: 'public/search-index.json'
+  
