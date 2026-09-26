@@ -13,6 +13,8 @@
     const canonicalUrl = permalink ? new URL(permalink, SITE.url).href : Astro.url.href
     const socialImageUrl = image ? new URL(image, SITE.url).href : undefined
 ---
+    <meta id="theme-color" name="theme-color" content="#f3f4f6" />
+
     <script is:inline>
         (() => {
             const savedTheme = localStorage.getItem('theme')
@@ -20,6 +22,7 @@
             const isDark = savedTheme === 'dark' || (!savedTheme && prefersDark)
             document.documentElement.classList.toggle('dark', isDark)
             document.documentElement.style.colorScheme = isDark ? 'dark' : 'light'
+            document.querySelector<HTMLMetaElement>('#theme-color')?.setAttribute('content', isDark ? '#1f2937' : '#f3f4f6')
         })()
     </script>
 
@@ -42,7 +45,6 @@
     <link rel="manifest" href="/site.webmanifest">
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
-    <meta name="theme-color" content="#ffffff" />
     <link rel="canonical" href={canonicalUrl} />
 
     <!-- Open Graph Tags (Facebook) -->
