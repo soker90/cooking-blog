@@ -71,7 +71,7 @@
             </div>
         {/if}
     </div>
-    <div class="note"><small>Pulsa en cualquier sitio para cerrar la búsqueda</small></div>
+    <div class="note"><small>Pulsa Esc o en el fondo para cerrar la búsqueda</small></div>
 </div>
 <style>
     @reference "../styles/global.css";
