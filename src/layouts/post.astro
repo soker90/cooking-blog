@@ -68,7 +68,7 @@ const recipeSchema = content.image && recipeIngredient.length && recipeInstructi
                 { content.tags.length > 0 && content.tags.map(tag => <a class="post__tag" href={`/tags/${tag}`} title={tag}>{tag}</a>) }
             </div>
             <p class="post__desc">
-                <a class="post__author" href={`https://twitter.com/${content.authorTwitter}`} title={`${content.author + "'s"} twitter`} target="_blank" rel="external">{ content.author }</a> |
+                <a class="post__author" href={`https://twitter.com/${content.authorTwitter}`} title={`${content.author + "'s"} twitter`} target="_blank" rel="external noopener">{ content.author }</a> |
                 <span class="post__date">{ new Intl.DateTimeFormat('es-ES', { dateStyle: 'full' }).format(new Date(content.date))}</span>
             </p>
             <h1 class="post__title">{ content.title }</h1>
