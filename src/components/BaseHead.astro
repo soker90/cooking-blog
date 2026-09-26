@@ -5,8 +5,8 @@
     export type Props = {
         title: string
         description: string
-        permalink: string
-        image: string
+        permalink?: string
+        image?: string
     }
 
     const { title = SITE.title , description, permalink, image } = Astro.props as Props
