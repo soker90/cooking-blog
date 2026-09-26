@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "THEME_KEY=ambersky astro dev",
+    "prebuild": "node ./scripts/optimize-images.mjs",
     "build": "astro build",
     "check": "astro check",
     "postbuild": "node ./scripts/search/prepare-index.js",
@@ -23,6 +24,7 @@
     "globby": "^16.2.4",
     "gray-matter": "^4.0.3",
     "lunr": "^2.3.9",
+    "sharp": "^0.35.4",
     "svelte": "^5.57.1",
     "tailwindcss": "^4.3.3",
     "typescript": "^6.0.3",
