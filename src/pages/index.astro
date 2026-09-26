@@ -16,7 +16,8 @@ const recipeListSchema = {
     }))
 }
 ---
-<DefaultPageLayout content={{ title, description }} showPageHeader={false}>\n    <script type="application/ld+json" set:html={JSON.stringify(recipeListSchema)} />
+<DefaultPageLayout content={{ title, description }} showPageHeader={false}>
+    <script type="application/ld+json" set:html={JSON.stringify(recipeListSchema)} />
     <PostPreviewList posts={posts} />
     <div class="page__actions">
         <a class="action__go-to-blog" href="/blog" title="Todas">Todas &rarr;</a>
