@@ -10,9 +10,9 @@ import SearchModal from './SearchModal.svelte'
     <br class="my-4"/>
     <Header/>
     <Nav/>
-    <div class="content">
+    <main id="main-content" class="content">
         <slot />
-    </div>
+    </main>
     <br class="my-4"/>
     <Footer/>
     <SearchModal client:idle/>
