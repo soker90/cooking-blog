@@ -23,23 +23,23 @@
                 }
                 searchableDocs = await resp.json()
                 // Initialize indexing
-            searchIndex = lunr(function(){
-            // the match key...
-            this.ref('slug')
+                searchIndex = lunr(function(){
+                    // the match key...
+                    this.ref('slug')
 
-            // indexable properties
-            this.field('title')
-            this.field('description')
-            this.field('tags')
+                    // indexable properties
+                    this.field('title')
+                    this.field('description')
+                    this.field('tags')
 
-            // Omit, if you don't want to search on `body`
-            this.field('body')
+                    // Omit, if you don't want to search on `body`
+                    this.field('body')
 
-            // Index every document
-                searchableDocs.forEach(doc => {
-                    this.add(doc)
-                }, this)
-            })
+                    // Index every document
+                    searchableDocs.forEach(doc => {
+                        this.add(doc)
+                    }, this)
+                })
                 if (isMounted) {
                     searchError = false
                     searchInput?.focus()
