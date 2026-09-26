@@ -5,7 +5,7 @@ const MONTHS = ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', '
 export const toTitleCase = (str: string) => str.replace(
       /\w\S*/g,
       function(txt) {
-        return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+        return txt.charAt(0).toUpperCase() + txt.slice(1).toLowerCase();
       }
     )
 
