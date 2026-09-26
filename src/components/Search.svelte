@@ -54,7 +54,7 @@
         <label for="search"><SearchIcon found={searchResults.length > 0} /></label>
         <input id="search" type="text" name="search" aria-label="Buscar recetas" bind:this={searchInput} placeholder="Buscar..." bind:value={searchQuery} />
     </div>
-    <div class="search__results">
+    <div class="search__results" aria-live="polite" aria-atomic="false">
         {#if searchResults.length}
             {#each searchResults as post, i }
                 <PostSearchPreview post={post} isLast={ i === searchResults.length - 1 } />
