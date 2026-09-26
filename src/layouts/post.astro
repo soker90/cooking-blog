@@ -3,6 +3,7 @@ import { SITE } from '$/config'
 import MainLayout from '$/components/MainLayout.astro'
 import BaseHead from '$/components/BaseHead.astro'
 import Prose from '$/components/Prose.astro'
+import OptimizedImage from '$/components/OptimizedImage.astro'
 
 const { content, rawContent, url } = Astro.props
 
@@ -67,7 +68,7 @@ const recipeSchema = content.image && recipeIngredient.length && recipeInstructi
             <p class="post__desc_content">{content.description}</p>    
         </div>
         
-        {content.image && <img src={content.image} alt={content.title} decoding="async" fetchpriority="high" />}
+        {content.image && <OptimizedImage src={content.image} alt={content.title} fetchpriority="high" />}
         <Prose>
             <slot />
         </Prose>
