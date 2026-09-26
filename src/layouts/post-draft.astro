@@ -16,12 +16,12 @@ const { content } = Astro.props
             <div class="post__tags">
                 { content.tags.length > 0 && content.tags.map(tag => <a class="post__tag" href={`/tags/${tag}`} title={tag}>{tag}</a>) }
             </div>
-            <h5 class="post__desc">
+            <p class="post__desc">
                 <a class="post__author" href={`https://twitter.com/${content.authorTwitter}`} title={`${content.author + "'s"} twitter`} target="_blank" rel="external">{ content.author }</a> |
                 <span class="post__date">{ new Intl.DateTimeFormat('es-ES', { dateStyle: 'full' }).format(new Date(content.date))}</span>
-            </h5>
+            </p>
             <h1 class="post__title">{ content.title }</h1>
-            <h5 class="post__desc_content">{content.description}</h5>    
+            <p class="post__desc_content">{content.description}</p>    
         </div>
         <div class="draft-message">
             Estás viendo una versión <strong>preliminar </strong> de <code>/blog/{content.slug}</code> la cuál no está publicada todavía.
