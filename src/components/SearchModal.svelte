@@ -4,16 +4,10 @@
     import Search from './Search.svelte'
 
     const dismissModal = () => isSearchVisible.set(false)
-    const handleEsc = (event) => {
-        if (event.key === 'Escape') {
-			dismissModal()
-		}
-    }
-
 </script>
 {#if $isSearchVisible}
-    <div class="modal__backdrop" on:click={dismissModal} on:keydown={handleEsc} transition:fade></div>
-    <div class="modal">
+    <button type="button" class="modal__backdrop" aria-label="Cerrar búsqueda" on:click={dismissModal} transition:fade></button>
+    <div class="modal" role="dialog" aria-modal="true" aria-label="Buscar recetas">
         <div class="modal__cnt" transition:fly="{{ y: 200, duration: 300 }}">
             <Search />
         </div>
@@ -25,8 +19,9 @@
         @apply absolute top-0 left-0 w-full h-full grid justify-center content-center pointer-events-none;
     }
     .modal__backdrop {
-        @apply absolute top-0 left-0 w-full h-screen opacity-50 bg-gradient-to-tr from-slate-600 to-slate-900 z-0;
+        @apply absolute top-0 left-0 w-full h-screen opacity-50 bg-gradient-to-tr from-slate-600 to-slate-900 z-0 border-0 p-0 cursor-default;
     }
+    .modal__backdrop:focus { @apply outline-none; }
     .modal__cnt {
         @apply w-full z-10 pointer-events-auto;
     }
