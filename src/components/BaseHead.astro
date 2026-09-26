@@ -11,6 +11,7 @@
     }
 
     const { title = SITE.title , description, permalink, image } = Astro.props as Props
+    const canonicalUrl = permalink || Astro.url.href
 ---
     <script is:inline>
         (() => {
@@ -45,12 +46,13 @@
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="msapplication-config" content="/browserconfig.xml"/>
     <meta name="theme-color" content="#ffffff" />
+    <link rel="canonical" href={canonicalUrl} />
 
     <!-- Open Graph Tags (Facebook) -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
     {permalink &&
-        <meta property="og:url" content={permalink} />
+        <meta property="og:url" content={canonicalUrl} />
     }
     {description &&
         <meta property="og:description" content={description} />
@@ -60,16 +62,16 @@
     }
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:title" content={title} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
     {permalink &&
-        <meta property="twitter:url" content={permalink} />
+        <meta name="twitter:url" content={canonicalUrl} />
     }
     {description &&
-        <meta property="twitter:description" content={description} />
+        <meta name="twitter:description" content={description} />
     }
     {image &&
-        <meta property="twitter:image" content={image} />
+        <meta name="twitter:image" content={image} />
     }
 
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
