@@ -26,7 +26,7 @@ const parseDuration = (value: string | undefined) => {
 const recipeDescription = content.description?.trim() ?? ''
 const prepTime = parseDuration(recipeDescription.match(/Preparación:\s*([^|]+)/i)?.[1])
 const totalTime = parseDuration(recipeDescription.match(/Tiempo total:\s*([^|]+)/i)?.[1])
-const recipeYield = recipeDescription.match(/Raciones:\s*(\d+)/i)?.[1]
+const recipeYield = recipeDescription.match(/(?:Raciones|Cantidad|Unidades):\s*([^|]+)/i)?.[1]?.trim()
 
 const markdown = typeof rawContent === 'function' ? rawContent().replace(/^---[\s\S]*?---\s*/m, '') : ''
 const ingredientsSection = markdown.match(/##\s+Ingredientes\b([\s\S]*?)(?=^##\s|$)/im)?.[1] ?? ''
