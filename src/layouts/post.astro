@@ -9,10 +9,18 @@ const { content, rawContent, url } = Astro.props
 
 const parseDuration = (value: string | undefined) => {
     if (!value) return undefined
-    const hours = value.match(/(\d+)\s*h/i)?.[1]
-    const minutes = value.match(/(\d+)\s*min/i)?.[1]
+
+    const hours = Number.parseFloat(value.match(/(\d+(?:[.,]\d+)?)\s*h/i)?.[1]?.replace(',', '.') ?? '0')
+    const minutes = Number.parseFloat(value.match(/(\d+(?:[.,]\d+)?)\s*min/i)?.[1]?.replace(',', '.') ?? '0')
     if (!hours && !minutes) return undefined
-    return `PT${hours ? `${hours}H` : ''}${minutes ? `${minutes}M` : ''}`
+
+    const totalSeconds = Math.round((hours * 60 + minutes) * 60)
+    const totalMinutes = Math.floor(totalSeconds / 60)
+    const seconds = totalSeconds % 60
+    const formattedHours = Math.floor(totalMinutes / 60)
+    const formattedMinutes = totalMinutes % 60
+
+    return `PT${formattedHours ? `${formattedHours}H` : ''}${formattedMinutes ? `${formattedMinutes}M` : ''}${seconds ? `${seconds}S` : ''}`
 }
 
 const recipeDescription = content.description?.trim() ?? ''
