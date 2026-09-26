@@ -3,7 +3,6 @@ import BaseLayout from './BaseLayout.astro';
 import Header from './Header.astro';
 import Footer from './Footer.astro';
 import Nav from './Nav.astro';
-import Portal from './Portal.astro';
 import SearchModal from './SearchModal.svelte'
 
 ---
@@ -16,9 +15,7 @@ import SearchModal from './SearchModal.svelte'
     </div>
     <br class="my-4"/>
     <Footer/>
-    <Portal>
-            <SearchModal client:idle/>
-    </Portal>
+    <SearchModal client:idle/>
 </BaseLayout>
 
 <style>
