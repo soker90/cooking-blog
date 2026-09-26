@@ -26,7 +26,6 @@ const instructionsSection = markdown.match(/##\s+Elaboración\b([\s\S]*?)(?=^##\
 const recipeIngredient = ingredientsSection.split('\n').filter(line => /^\s*-\s+/.test(line)).map(line => line.replace(/^\s*-\s+/, '').trim()).filter(Boolean)
 const recipeInstructions = instructionsSection.split('\n').map(line => line.match(/^\s*\d+[.)]\s+(.+)/)?.[1]?.trim()).filter((step): step is string => Boolean(step)).map((text, index) => ({
     '@type': 'HowToStep',
-    name: `Paso ${index + 1}`,
     text
 }))
 
