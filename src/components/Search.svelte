@@ -9,34 +9,46 @@
 
     let searchQuery = ''
     let searchResults = []
+    let searchError = false
 
     onMount(() => {
         let isMounted = true
 
         const loadSearch = async() => {
-            const lunr = (await import('lunr')).default
-            const resp = await fetch('/search-index.json')
-            searchableDocs = await resp.json()
-            // Initialize indexing
-            searchIndex = lunr(function(){
-            // the match key...
-            this.ref('slug')
+            try {
+                const lunr = (await import('lunr')).default
+                const resp = await fetch('/search-index.json')
+                if (!resp.ok) {
+                    throw new Error(`Search index request failed: ${resp.status}`)
+                }
+                searchableDocs = await resp.json()
+                // Initialize indexing
+                searchIndex = lunr(function(){
+                    // the match key...
+                    this.ref('slug')
 
-            // indexable properties
-            this.field('title')
-            this.field('description')
-            this.field('tags')
+                    // indexable properties
+                    this.field('title')
+                    this.field('description')
+                    this.field('tags')
 
-            // Omit, if you don't want to search on `body`
-            this.field('body')
+                    // Omit, if you don't want to search on `body`
+                    this.field('body')
 
-            // Index every document
-                searchableDocs.forEach(doc => {
-                    this.add(doc)
-                }, this)
-            })
-            if (isMounted) {
-                searchInput?.focus()
+                    // Index every document
+                    searchableDocs.forEach(doc => {
+                        this.add(doc)
+                    }, this)
+                })
+                if (isMounted) {
+                    searchError = false
+                    searchInput?.focus()
+                }
+            } catch {
+                if (isMounted) {
+                    searchError = true
+                    searchResults = []
+                }
             }
         }
 
@@ -75,7 +87,9 @@
             {/each}
         {:else}
             <div class="search__results--none">
-                {#if searchQuery.length}
+                {#if searchError}
+                    No se ha podido cargar la búsqueda. Inténtalo de nuevo.
+                {:else if searchQuery.length}
                     No se han encontrado recetas
                 {:else}
                     Buscar recetas...
