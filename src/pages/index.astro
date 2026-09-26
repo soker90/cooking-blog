@@ -1,4 +1,5 @@
 ---
+import { SITE } from '$/config'
 import DefaultPageLayout from '$/layouts/default.astro'
 import PostPreviewList from '$/components/PostPreviewList.astro'
 
@@ -12,7 +13,7 @@ const recipeListSchema = {
     itemListElement: posts.map((post, index) => ({
         '@type': 'ListItem',
         position: index + 1,
-        url: new URL(post.url, 'https://recetas.eduardoparra.es').href
+        url: new URL(post.url, SITE.url).href
     }))
 }
 ---
