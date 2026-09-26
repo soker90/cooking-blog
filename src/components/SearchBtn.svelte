@@ -6,6 +6,6 @@
         isSearchVisible.set(true)
     }
 </script>
-<button on:click={showSearchDialog}>
+<button type="button" aria-label="Buscar recetas" on:click={showSearchDialog}>
     <SearchIcon />
 </button>
