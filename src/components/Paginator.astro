@@ -1,10 +1,10 @@
 ---
 const { page } = Astro.props
 ---
-<div class="page__actions">
-    {page.url.prev && <a class="action__go-to-x" href={page.url.prev} title="Go to Previous">&larr; Prev</a>}
-    {page.url.next && <a class="action__go-to-x" href={page.url.next} title="Go to Next">Next &rarr;</a>}
-</div>
+<nav class="page__actions" aria-label="Paginación">
+    {page.url.prev && <a class="action__go-to-x" href={page.url.prev} aria-label="Página anterior">&larr; Anterior</a>}
+    {page.url.next && <a class="action__go-to-x" href={page.url.next} aria-label="Página siguiente">Siguiente &rarr;</a>}
+</nav>
 <style>
     @reference "../styles/global.css";
     .page__actions {
