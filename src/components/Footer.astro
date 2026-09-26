@@ -1,11 +1,9 @@
 ---
     import { SITE } from '$/config'
-    import NetlifyIdentity from './NetlifyIdentity.svelte'
 ---
 <footer class="footer">
     <nav class="nav">
         <div>{new Date().getFullYear()}  <a href={ SITE.githubUrl } title={`${ SITE.name }'s Github URL'`}>{ SITE.name }</a>
-        <NetlifyIdentity client:idle/>
         </div>
     </nav>
 </footer>
