@@ -14,7 +14,9 @@ export default /** @type {import('astro').AstroUserConfig} */ ({
   integrations: [
     mdx(),
     svelte(),
-    sitemap()
+    sitemap({
+      filter: (page) => !new URL(page).pathname.startsWith('/drafts')
+    })
   ],
   vite: {
     plugins: [tailwindcss()],
