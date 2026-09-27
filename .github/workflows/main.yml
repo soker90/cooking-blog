@@ -13,9 +13,9 @@ jobs:
       contents: write
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      - uses: actions/checkout@v7
       - name: SSG Publish Drafts
-        uses: one-aalam/github-action-astro-publish-drafts@64ac07cdf7ea3ff92124416f3a115804a08c9f8b # v0.1-beta
+        uses: one-aalam/github-action-astro-publish-drafts@v0.1-beta
         with:
           github_token: $\{{ secrets.GITHUB_TOKEN }}
           github_actor: soker90
