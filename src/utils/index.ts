@@ -10,6 +10,4 @@ export const toTitleCase = (str: string) => str.replace(
 
 export const getMonthName = (date: Date) => MONTHS[new Date(date).getMonth()]
 
-export const getSlugFromPathname = (pathname: string) => path.basename(pathname, path.extname(pathname))
-
 export { getSlugFromPathname, slugify } from './slug.js'
