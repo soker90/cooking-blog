@@ -7,10 +7,11 @@ const title = 'Inicio'
 const description = 'Mis recetas'
 
 const posts = Object.values(import.meta.glob('./blog/*.md', { eager: true }))
+const sortedPosts = posts.sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date))
 const recipeListSchema = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    itemListElement: posts.map((post, index) => ({
+    itemListElement: sortedPosts.map((post, index) => ({
         '@type': 'ListItem',
         position: index + 1,
         url: new URL(post.url, SITE.url).href
@@ -19,8 +20,8 @@ const recipeListSchema = {
 ---
 <DefaultPageLayout content={{ title, description }} showPageHeader={false}>
     <h1 class="sr-only">{title}</h1>
-    <script type="application/ld+json" set:html={JSON.stringify(recipeListSchema).replace(/</g, '\\u003c')} />
-    <PostPreviewList posts={posts} />
+    <script type="application/ld+json" set:html={JSON.stringify(recipeListSchema).replace(/</g, '\u003c')} />
+    <PostPreviewList posts={sortedPosts} />
     <div class="page__actions">
         <a class="action__go-to-blog" href="/blog" title="Todas">Todas &rarr;</a>
     </div>
