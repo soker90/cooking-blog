@@ -5,7 +5,9 @@
 
     const THEME_DARK: ThemeType = 'dark'
     const THEME_LIGHT: ThemeType = 'light'
-    let currTheme: ThemeType = THEME_LIGHT
+    let currTheme: ThemeType = typeof document !== 'undefined' && document.documentElement.classList.contains(THEME_DARK)
+        ? THEME_DARK
+        : THEME_LIGHT
 
     function toggleTheme() {
         currTheme = currTheme === THEME_DARK ? THEME_LIGHT : THEME_DARK
