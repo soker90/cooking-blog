@@ -57,9 +57,7 @@
     <!-- Open Graph Tags (Facebook) -->
     <meta property="og:type" content={type} />
     <meta property="og:title" content={title} />
-    {permalink &&
-        <meta property="og:url" content={canonicalUrl} />
-    }
+    <meta property="og:url" content={canonicalUrl} />
     {description &&
         <meta property="og:description" content={description} />
     }
@@ -79,9 +77,7 @@
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
-    {permalink &&
-        <meta name="twitter:url" content={canonicalUrl} />
-    }
+    <meta name="twitter:url" content={canonicalUrl} />
     {description &&
         <meta name="twitter:description" content={description} />
     }
