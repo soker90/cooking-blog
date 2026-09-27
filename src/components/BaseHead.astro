@@ -21,7 +21,7 @@
 
     <script is:inline>
         (() => {
-            let savedTheme: string | null = null
+            let savedTheme = null
             try {
                 savedTheme = localStorage.getItem('theme')
             } catch {
@@ -38,7 +38,7 @@
             const isDark = savedTheme === 'dark' || (!savedTheme && prefersDark)
             document.documentElement.classList.toggle('dark', isDark)
             document.documentElement.style.colorScheme = isDark ? 'dark' : 'light'
-            document.querySelector<HTMLMetaElement>('#theme-color')?.setAttribute('content', isDark ? '#1f2937' : '#f3f4f6')
+            document.querySelector('#theme-color')?.setAttribute('content', isDark ? '#1f2937' : '#f3f4f6')
         })()
     </script>
 
