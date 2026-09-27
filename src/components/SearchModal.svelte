@@ -58,9 +58,9 @@
         return unsubscribe
     })
 </script>
-<svelte:window on:keydown={handleKeydown} />
+<svelte:window onkeydown={handleKeydown} />
 {#if $isSearchVisible}
-    <button type="button" class="modal__backdrop" aria-label="Cerrar búsqueda" on:click={dismissModal} transition:fade></button>
+    <button type="button" class="modal__backdrop" aria-label="Cerrar búsqueda" onclick={dismissModal} transition:fade></button>
     <div class="modal" role="dialog" aria-modal="true" aria-label="Buscar recetas" bind:this={dialog}>
         <div class="modal__cnt" transition:fly="{{ y: 200, duration: 300 }}">
             <Search />
