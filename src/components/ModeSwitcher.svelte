@@ -21,17 +21,23 @@
     }
 
     onMount(() => {
+        let savedTheme: string | null = null
         try {
-            const savedTheme = localStorage.getItem('theme')
-            const prefersDark = window.matchMedia(`(prefers-color-scheme: ${THEME_DARK})`).matches
-            currTheme = savedTheme === THEME_DARK || (!savedTheme && prefersDark)
-                ? THEME_DARK
-                : THEME_LIGHT
+            savedTheme = localStorage.getItem('theme')
         } catch {
-            currTheme = document.documentElement.classList.contains(THEME_DARK)
-                ? THEME_DARK
-                : THEME_LIGHT
+            // Continue with the system preference when browser storage is unavailable.
         }
+
+        let prefersDark = document.documentElement.classList.contains(THEME_DARK)
+        try {
+            prefersDark = window.matchMedia(`(prefers-color-scheme: ${THEME_DARK})`).matches
+        } catch {
+            // Keep the theme already applied by the inline head script.
+        }
+
+        currTheme = savedTheme === THEME_DARK || (!savedTheme && prefersDark)
+            ? THEME_DARK
+            : THEME_LIGHT
     })
 </script>
 <button type="button" aria-label={currTheme === THEME_DARK ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'} onclick={toggleTheme}>
