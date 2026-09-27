@@ -66,6 +66,9 @@
     {image &&
         <meta property="og:image" content={socialImageUrl} />
     }
+    {image &&
+        <meta property="og:image:alt" content={title} />
+    }
     {type === 'article' && publishedTime &&
         <meta property="article:published_time" content={publishedTime} />
     }
@@ -84,5 +87,8 @@
     }
     {image &&
         <meta name="twitter:image" content={socialImageUrl} />
+    }
+    {image &&
+        <meta name="twitter:image:alt" content={title} />
     }
 
