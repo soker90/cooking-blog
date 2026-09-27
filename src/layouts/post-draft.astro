@@ -4,6 +4,7 @@ import MainLayout from '$/components/MainLayout.astro'
 import BaseHead from '$/components/BaseHead.astro'
 import Prose from '$/components/Prose.astro'
 import OptimizedImage from '$/components/OptimizedImage.astro'
+import { slugify } from '$/utils'
 
 const { content } = Astro.props
 ---
@@ -15,7 +16,7 @@ const { content } = Astro.props
     <MainLayout>
         <div class="post__header">
             <div class="post__tags">
-                { (content.tags ?? []).length > 0 && (content.tags ?? []).map(tag => <a class="post__tag" href={`/tags/${tag.toLowerCase()}`} title={tag}>{tag}</a>) }
+                { (content.tags ?? []).length > 0 && (content.tags ?? []).map(tag => <a class="post__tag" href={`/tags/${slugify(tag)}`} title={tag}>{tag}</a>) }
             </div>
             <p class="post__desc">
                 <a class="post__author" href={`https://twitter.com/${content.authorTwitter}`} title={`${content.author + "'s"} twitter`} target="_blank" rel="external noopener">{ content.author }</a> |
