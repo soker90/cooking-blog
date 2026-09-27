@@ -8,7 +8,7 @@ export async function getStaticPaths({ }) {
     const allPosts = Object.values(import.meta.glob<MarkdownInstance<Record<string, unknown>>>('../*.md', { eager: true }))
     const allSlugs = new Set()
     const allPostsWithSlug = allPosts.map(post => {
-        const slug = getSlugFromPathname(post.file).toLowerCase()
+        const slug = getSlugFromPathname(post.file)
         allSlugs.add(slug)
         return {
             ...post,

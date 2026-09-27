@@ -1,4 +1,3 @@
-import path from 'path'
 const MONTHS = ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic']
 
 
@@ -11,4 +10,4 @@ export const toTitleCase = (str: string) => str.replace(
 
 export const getMonthName = (date: Date) => MONTHS[new Date(date).getMonth()]
 
-export const getSlugFromPathname = (pathname: string) => path.basename(pathname, path.extname(pathname))
+export { getSlugFromPathname, slugify } from './slug.js'
