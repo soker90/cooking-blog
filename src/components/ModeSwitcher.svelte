@@ -5,9 +5,7 @@
 
     const THEME_DARK: ThemeType = 'dark'
     const THEME_LIGHT: ThemeType = 'light'
-    let currTheme: ThemeType = typeof document !== 'undefined' && document.documentElement.classList.contains(THEME_DARK)
-        ? THEME_DARK
-        : THEME_LIGHT
+    let currTheme: ThemeType = THEME_LIGHT
 
     function toggleTheme() {
         currTheme = currTheme === THEME_DARK ? THEME_LIGHT : THEME_DARK
@@ -23,7 +21,21 @@
     }
 
     onMount(() => {
-        currTheme = document.documentElement.classList.contains(THEME_DARK)
+        let savedTheme: string | null = null
+        try {
+            savedTheme = localStorage.getItem('theme')
+        } catch {
+            // Continue with the system preference when browser storage is unavailable.
+        }
+
+        let prefersDark = document.documentElement.classList.contains(THEME_DARK)
+        try {
+            prefersDark = window.matchMedia(`(prefers-color-scheme: ${THEME_DARK})`).matches
+        } catch {
+            // Keep the theme already applied by the inline head script.
+        }
+
+        currTheme = savedTheme === THEME_DARK || (!savedTheme && prefersDark)
             ? THEME_DARK
             : THEME_LIGHT
     })
