@@ -6,7 +6,7 @@ let title = 'Categorías'
 let description = 'Todas las categorías usadas'
 
 const allPosts = Object.values(import.meta.glob('../blog/*.md', { eager: true }));
-const tags = [...new Set([].concat.apply([], allPosts.map(post => post.frontmatter.tags ?? [])).map(tag => slugify(tag)))]
+const tags = [...new Set([].concat.apply([], allPosts.map(post => post.frontmatter.tags ?? [])))]
 ---
 
 <DefaultPageLayout content={{ title, description }}>
