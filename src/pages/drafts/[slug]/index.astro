@@ -31,13 +31,6 @@ const { slug } = Astro.params
 const { pages } = Astro.props
 const [ post ] = pages
 ---
-<div class="draft-message">
-    Estás viendo una versión <strong>preliminar</strong> de <code>/blog/{slug}</code>, la cuál no está publicada todavía
-</div>
-<post.Content/>
-<style>
-    @reference "../../../styles/global.css";
-    .draft-message {
-        @apply w-full bg-yellow-300 dark:bg-yellow-700 text-gray-700 dark:text-white px-2 py-1 text-center
-    }
-</style>
+<PostDraftPageLayout content={{ ...post.frontmatter, slug }}>
+    <post.Content/>
+</PostDraftPageLayout>
