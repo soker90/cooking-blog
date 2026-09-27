@@ -1,5 +1,5 @@
 ---
-        import { SITE } from '$/config'
+    import { SITE } from '$/config'
     import '../styles/global.css'
 
     export type Props = {
@@ -21,12 +21,16 @@
 
     <script is:inline>
         (() => {
-            const savedTheme = localStorage.getItem('theme')
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-            const isDark = savedTheme === 'dark' || (!savedTheme && prefersDark)
-            document.documentElement.classList.toggle('dark', isDark)
-            document.documentElement.style.colorScheme = isDark ? 'dark' : 'light'
-            document.querySelector<HTMLMetaElement>('#theme-color')?.setAttribute('content', isDark ? '#1f2937' : '#f3f4f6')
+            try {
+                const savedTheme = localStorage.getItem('theme')
+                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+                const isDark = savedTheme === 'dark' || (!savedTheme && prefersDark)
+                document.documentElement.classList.toggle('dark', isDark)
+                document.documentElement.style.colorScheme = isDark ? 'dark' : 'light'
+                document.querySelector<HTMLMetaElement>('#theme-color')?.setAttribute('content', isDark ? '#1f2937' : '#f3f4f6')
+            } catch {
+                // Keep the default light theme when browser storage is unavailable.
+            }
         })()
     </script>
 
