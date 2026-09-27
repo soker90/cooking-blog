@@ -89,10 +89,10 @@
             <div class="search__results--none">
                 {#if searchError}
                     No se ha podido cargar la búsqueda. Inténtalo de nuevo.
-                {:else if searchQuery.length}
-                    No se han encontrado recetas
+                {:else if searchQuery.length < 3}
+                    {searchQuery.length ? 'Escribe al menos 3 caracteres para buscar' : 'Buscar recetas...'}
                 {:else}
-                    Buscar recetas...
+                    No se han encontrado recetas
                 {/if}
             </div>
         {/if}
