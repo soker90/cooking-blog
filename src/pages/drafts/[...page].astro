@@ -9,7 +9,11 @@ let description = 'Estas viendo una lista de las recetas no publicadas. Pueden n
 
 export async function getStaticPaths({ paginate, rss }) {
     const allPosts = Object.values(import.meta.glob('./*.md', { eager: true }))
-    const sortedPosts = allPosts.sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date));
+    const sortedPosts = allPosts.sort((a, b) => {
+        if (!a.frontmatter.date) return 1
+        if (!b.frontmatter.date) return -1
+        return new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime()
+    });
 
     return paginate(sortedPosts, {
       pageSize: PAGE_SIZE
