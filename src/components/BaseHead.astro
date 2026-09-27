@@ -8,6 +8,9 @@
         permalink?: string
         image?: string
         robots?: string
+        type?: 'website' | 'article'
+        publishedTime?: string
+        tags?: string[]
     }
 
     const { title = SITE.title, description, permalink, image, robots, type = 'website', publishedTime, tags } = Astro.props as Props
