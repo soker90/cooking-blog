@@ -21,16 +21,24 @@
 
     <script is:inline>
         (() => {
+            let savedTheme: string | null = null
             try {
-                const savedTheme = localStorage.getItem('theme')
-                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-                const isDark = savedTheme === 'dark' || (!savedTheme && prefersDark)
-                document.documentElement.classList.toggle('dark', isDark)
-                document.documentElement.style.colorScheme = isDark ? 'dark' : 'light'
-                document.querySelector<HTMLMetaElement>('#theme-color')?.setAttribute('content', isDark ? '#1f2937' : '#f3f4f6')
+                savedTheme = localStorage.getItem('theme')
             } catch {
-                // Keep the default light theme when browser storage is unavailable.
+                // Continue with the system preference when browser storage is unavailable.
             }
+
+            let prefersDark = false
+            try {
+                prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+            } catch {
+                // Keep the light default when the system preference is unavailable.
+            }
+
+            const isDark = savedTheme === 'dark' || (!savedTheme && prefersDark)
+            document.documentElement.classList.toggle('dark', isDark)
+            document.documentElement.style.colorScheme = isDark ? 'dark' : 'light'
+            document.querySelector<HTMLMetaElement>('#theme-color')?.setAttribute('content', isDark ? '#1f2937' : '#f3f4f6')
         })()
     </script>
 
