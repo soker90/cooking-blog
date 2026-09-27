@@ -2,6 +2,7 @@ import path from 'path'
 import { promises as fs } from 'fs'
 import { globby } from 'globby'
 import grayMatter from 'gray-matter'
+import { getSlugFromPathname } from '../../src/utils/slug.js'
 
 (async function () {
     // prepare the dirs
@@ -10,8 +11,6 @@ import grayMatter from 'gray-matter'
     const contentDir = path.join(srcDir, 'pages', 'blog')
     const contentFilePattern = path.join(contentDir, '*.md')
     const indexFile = path.join(publicDir, 'search-index.json')
-    const getSlugFromPathname = (pathname) => path.basename(pathname, path.extname(pathname))
-
     const contentFilePaths = await globby([ contentFilePattern ])
 
     if(contentFilePaths.length) {
