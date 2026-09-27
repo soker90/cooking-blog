@@ -7,9 +7,10 @@
         description: string
         permalink?: string
         image?: string
+        robots?: string
     }
 
-    const { title = SITE.title, description, permalink, image, type = 'website', publishedTime, tags } = Astro.props as Props
+    const { title = SITE.title, description, permalink, image, robots, type = 'website', publishedTime, tags } = Astro.props as Props
     const canonicalUrl = permalink ? new URL(permalink, SITE.url).href : Astro.url.href
     const socialImageUrl = image ? new URL(image, SITE.url).href : undefined
 ---
@@ -37,6 +38,9 @@
     <meta name="title" content={title}/>
     {description &&
         <meta name="description" content={description} />
+    }
+    {robots &&
+        <meta name="robots" content={robots} />
     }
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
