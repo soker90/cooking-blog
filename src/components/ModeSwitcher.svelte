@@ -23,21 +23,7 @@
     }
 
     onMount(() => {
-        let savedTheme: string | null = null
-        try {
-            savedTheme = localStorage.getItem('theme')
-        } catch {
-            // Continue with the system preference when browser storage is unavailable.
-        }
-
-        let prefersDark = document.documentElement.classList.contains(THEME_DARK)
-        try {
-            prefersDark = window.matchMedia(`(prefers-color-scheme: ${THEME_DARK})`).matches
-        } catch {
-            // Keep the theme already applied by the inline head script.
-        }
-
-        currTheme = savedTheme === THEME_DARK || (!savedTheme && prefersDark)
+        currTheme = document.documentElement.classList.contains(THEME_DARK)
             ? THEME_DARK
             : THEME_LIGHT
     })
