@@ -3,12 +3,12 @@ import { SITE } from '$/config'
 import BaseHead from '$/components/BaseHead.astro';
 import MainLayout from '$/components/MainLayout.astro';
 
-const { content, showPageHeader = true } = Astro.props
+const { content, showPageHeader = true, robots } = Astro.props
 ---
 <!doctype html>
 <html lang="es">
     <head>
-        <BaseHead title={ content.title ? `${ SITE.title } | ${content.title}` : SITE.title } description={ content.description }/>
+        <BaseHead title={ content.title ? `${ SITE.title } | ${content.title}` : SITE.title } description={ content.description } robots={robots}/>
     </head>
     <MainLayout>
         {showPageHeader &&
