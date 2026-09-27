@@ -1,4 +1,6 @@
 <script lang="ts">
+    import { slugify } from '../utils'
+    
     type Props = {
         slug: string
         title: string
@@ -19,7 +21,7 @@
         </p>
         <ul class="tag-list">
             {#each post.tags as tag}
-                <li><a class="tag" href={`/tags/${tag.toLowerCase()}`} title={tag}>{tag}</a></li>
+                <li><a class="tag" href={`/tags/${slugify(tag)}`} title={tag}>{tag}</a></li>
             {/each}
         </ul>
     </div>
