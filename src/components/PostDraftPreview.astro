@@ -11,7 +11,7 @@ const { frontmatter: post, file } = Astro.props.post
     </div>
     <div class="flex-1">
         <h2 class="post-draft-preview__title">
-            <a href={`/drafts/${getSlugFromPathname(file)}`} title={post.title}>{post.title}</a>
+            <a href={`/drafts/${getSlugFromPathname(file).toLowerCase()}`} title={post.title}>{post.title}</a>
         </h2>
         <p class="post-draft-preview__desc">
             {post.description}
