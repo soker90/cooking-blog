@@ -18,7 +18,7 @@ export async function getStaticPaths({ paginate, rss }) {
 
 const { page } = Astro.props
 ---
-<DefaultPageLayout content={{ title, description }}>
+<DefaultPageLayout content={{ title, description }} robots="noindex, nofollow">
     {
         (SITE.listDrafts) ? <PostDraftPreviewList posts={page.data} /> : (<p class="text-gray-700 dark:text-gray-100">Parece que has acabado en una página de publicaciones no publicadas. Encuentra todas las publicaciones publicadas <a href="/blog">aquí</a>!</p>)
     }
