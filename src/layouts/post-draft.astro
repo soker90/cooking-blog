@@ -15,7 +15,7 @@ const { content } = Astro.props
     <MainLayout>
         <div class="post__header">
             <div class="post__tags">
-                { content.tags.length > 0 && content.tags.map(tag => <a class="post__tag" href={`/tags/${tag}`} title={tag}>{tag}</a>) }
+                { (content.tags ?? []).length > 0 && (content.tags ?? []).map(tag => <a class="post__tag" href={`/tags/${tag.toLowerCase()}`} title={tag}>{tag}</a>) }
             </div>
             <p class="post__desc">
                 <a class="post__author" href={`https://twitter.com/${content.authorTwitter}`} title={`${content.author + "'s"} twitter`} target="_blank" rel="external noopener">{ content.author }</a> |
@@ -57,7 +57,7 @@ const { content } = Astro.props
         @apply inline-flex gap-2
     }
     .post__tag {
-        @apply text-gray-400 hover:text-theme-primary dark:hover:text-theme-dark-primary
+        @apply text-gray-400 dark:hover:text-theme-dark-primary
     }
 
     .draft-message {
