@@ -4,10 +4,10 @@ const { frontmatter: post, file } = Astro.props.post
 ---
 <div class="post-draft-preview">
     <div class="sm:w-20 md:w-32">
-        <div class="post-draft-preview__date">
+        {post.date && <div class="post-draft-preview__date">
             <span class="post-draft-preview__date__day">{ new Date(post.date).getDate() }</span>
             <span class="post-draft-preview__date__month-n-year">{ `${getMonthName(post.date)} ${new Date(post.date).getFullYear()}` }</span>
-        </div>
+        </div>}
     </div>
     <div class="flex-1">
         <h2 class="post-draft-preview__title">
