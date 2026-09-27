@@ -23,9 +23,7 @@ export const GET = () =>
       description: item.frontmatter.description,
       link: item.url,
       pubDate: item.frontmatter.date,
-      customData: item.frontmatter.image
-        ? `<image>${SITE.url}${item.frontmatter.image}</image>`
-        : undefined,
+
     })),
     // (optional) inject custom xml
     customData: `<language>es-es</language>`,
