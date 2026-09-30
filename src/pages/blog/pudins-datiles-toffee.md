@@ -45,9 +45,9 @@ date: 2026-09-30
 
 1. Pon un bol mediano sobre la tapa del vaso, añade los dátiles y el bicarbonato y reserva.
 2. Pon los 190 g de agua en el vaso y calienta **4 min/100 °C/vel 1**. Vierte el agua sobre los dátiles y el bicarbonato; la mezcla formará burbujas. Deja los dátiles en remojo durante 20 minutos.
-3. Mientras tanto, engrasa los recipientes. Reparte la mezcla en los 2 recipientes de 500 ml o viértela en el recipiente de 1 litro. Cúbrelos con papel de aluminio y colócalos en el recipiente Varoma.
+3. Mientras tanto, engrasa los recipientes y colócalos en el recipiente Varoma.
 4. Pon en el vaso los dátiles junto con el agua del remojo, la mantequilla, el azúcar moreno, la harina, el polvo de hornear y el huevo. Mezcla **20 seg/vel 5**.
-5. Vierte la mezcla en los recipientes preparados y aclara el vaso.
+5. Reparte la mezcla entre los 2 recipientes de 500 ml o viértela en el recipiente de 1 litro. Cubre los recipientes con papel de aluminio.
 6. Pon los 700 g de agua en el vaso, sitúa el Varoma en su posición y programa **40-45 min/Varoma/vel 1**, o hasta que al insertar una brocheta en el centro salga limpia.
 7. Retira el Varoma, deja templar los pudins y desmolda con cuidado. Sirve templados.
 
