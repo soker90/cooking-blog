@@ -1,7 +1,7 @@
 ---
 layout: $/layouts/post.astro
 title: Pudins de dátiles y toffee
-description: "Preparación: 25 min | Tiempo total: 1 h | Raciones: 8"
+description: "Preparación: 25 min | Tiempo total: 1 h | Raciones: 6"
 tags:
   - postres
   - thermomix
