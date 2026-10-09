@@ -9,7 +9,7 @@ category: blog
 author: Eduardo Parra
 authorTwitter: _eduparra
 date: 2026-10-09
-image: /images/uploads/tarta-queso-taza.jpg
+image: /images/uploads/tarta-queso-taza-original.webp
 ---
 
 ## Ingredientes
