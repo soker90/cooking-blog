@@ -16,7 +16,7 @@ image: /images/uploads/tarta-queso-taza.jpg
 
 * 2 cucharadas de queso crema
 * 1 huevo
-* Esencia de vainilla al gusto
+* Unas gotas de esencia de vainilla
 * 1 cucharada de azúcar
 * 1 cucharadita de maicena
 
@@ -27,7 +27,7 @@ image: /images/uploads/tarta-queso-taza.jpg
 
 ## Elaboración
 
-1. Pon el queso crema, el huevo, la esencia de vainilla, el azúcar y la maicena en una taza o cuenco apto para microondas.
+1. Pon el queso crema, el huevo, unas gotas de esencia de vainilla, el azúcar y la maicena en una taza o cuenco apto para microondas.
 2. Bate con un tenedor hasta conseguir una mezcla homogénea.
 3. Cocina en el microondas a **máxima potencia durante 2-3 minutos**, vigilando el punto de cocción. El tiempo puede variar según la potencia máxima de tu microondas y el recipiente.
 4. Deja enfriar y refrigera durante al menos **1 hora**.
