@@ -9,6 +9,7 @@ category: blog
 author: Eduardo Parra
 authorTwitter: _eduparra
 date: 2026-10-09
+image: /images/uploads/tarta-queso-taza.jpg
 ---
 
 ## Ingredientes
@@ -28,6 +29,6 @@ date: 2026-10-09
 
 1. Pon el queso crema, el huevo, la esencia de vainilla, el azúcar y la maicena en una taza o cuenco apto para microondas.
 2. Bate con un tenedor hasta conseguir una mezcla homogénea.
-3. Cocina en el microondas durante **2-3 minutos**, vigilando el punto de cocción. El tiempo puede variar según la potencia del microondas y el recipiente.
+3. Cocina en el microondas a **máxima potencia durante 2-3 minutos**, vigilando el punto de cocción. El tiempo puede variar según la potencia máxima de tu microondas y el recipiente.
 4. Deja enfriar y refrigera durante al menos **1 hora**.
 5. Si quieres, sirve con un poco de mermelada por encima.
