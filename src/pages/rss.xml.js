@@ -6,16 +6,16 @@ const typedPosts = /** @type {any[]} */ (allPosts);
 
 const sortedPosts = typedPosts.sort((a, b) => new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime());
 
-const escapeXml = (value) =>
+const escapeXml = (value: string) =>
   String(value).replace(/[<>&"']/g, (character) => ({
     "<": "&lt;",
     ">": "&gt;",
     "&": "&amp;",
     '"': "&quot;",
     "'": "&apos;",
-  })[character]);
+  } as Record<string, string>)[character]!);
 
-const getImageMetadata = (image) => {
+const getImageMetadata = (image: string | undefined) => {
   if (!image) return "";
 
   const imageUrl = new URL(image, SITE.url).href;
