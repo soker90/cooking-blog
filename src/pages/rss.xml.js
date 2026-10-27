@@ -6,7 +6,8 @@ const typedPosts = /** @type {any[]} */ (allPosts);
 
 const sortedPosts = typedPosts.sort((a, b) => new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime());
 
-const escapeXml = (value: string) =>
+/** @param {string} value */
+const escapeXml = (value) =>
   String(value).replace(/[<>&"']/g, (character) => ({
     "<": "&lt;",
     ">": "&gt;",
@@ -15,7 +16,8 @@ const escapeXml = (value: string) =>
     "'": "&apos;",
   } as Record<string, string>)[character]!);
 
-const getImageMetadata = (image: string | undefined) => {
+/** @param {string | undefined} image */
+const getImageMetadata = (image) => {
   if (!image) return "";
 
   const imageUrl = new URL(image, SITE.url).href;
