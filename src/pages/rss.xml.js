@@ -8,7 +8,8 @@ const sortedPosts = typedPosts.toSorted(
   (a, b) => new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime(),
 );
 
-const XML_ESCAPES: Record<string, string> = {
+/** @type {Record<string, string>} */
+const XML_ESCAPES = {
   "<": "&lt;",
   ">": "&gt;",
   "&": "&amp;",
