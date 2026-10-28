@@ -4,19 +4,23 @@ import { SITE } from "../config";
 const allPosts = Object.values(import.meta.glob("./blog/*.md", { eager: true }));
 const typedPosts = /** @type {any[]} */ (allPosts);
 
-const sortedPosts = typedPosts.sort((a, b) => new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime());
+const sortedPosts = typedPosts.toSorted(
+  (a, b) => new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime(),
+);
 
-/** @param {string} value */
+const XML_ESCAPES: Record<string, string> = {
+  "<": "&lt;",
+  ">": "&gt;",
+  "&": "&amp;",
+  '"': "&quot;",
+  "'": "&apos;",
+};
+
+/** @param {string} value @returns {string} */
 const escapeXml = (value) =>
-  String(value).replace(/[<>&"']/g, (character) => ({
-    "<": "&lt;",
-    ">": "&gt;",
-    "&": "&amp;",
-    '"': "&quot;",
-    "'": "&apos;",
-  } as Record<string, string>)[character]!);
+  value.replace(/[<>&"']/g, (character) => XML_ESCAPES[character] ?? character);
 
-/** @param {string | undefined} image */
+/** @param {string | undefined} image @returns {string} */
 const getImageMetadata = (image) => {
   if (!image) return "";
 
@@ -25,9 +29,12 @@ const getImageMetadata = (image) => {
   const mimeType = extension === "png" ? "image/png"
     : extension === "jpg" || extension === "jpeg" ? "image/jpeg"
     : extension === "gif" ? "image/gif"
-    : "image/webp";
+    : extension === "webp" ? "image/webp"
+    : undefined;
 
-  return `<enclosure url="${escapeXml(imageUrl)}" length="0" type="${mimeType}" />`;
+  if (!mimeType) return "";
+
+  return `<media:content xmlns:media="http://search.yahoo.com/mrss/" url="${escapeXml(imageUrl)}" medium="image" type="${mimeType}" />`;
 };
 
 export const GET = () =>
