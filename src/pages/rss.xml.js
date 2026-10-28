@@ -4,28 +4,54 @@ import { SITE } from "../config";
 const allPosts = Object.values(import.meta.glob("./blog/*.md", { eager: true }));
 const typedPosts = /** @type {any[]} */ (allPosts);
 
-const sortedPosts = typedPosts.sort((a, b) => new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime());
+const sortedPosts = [...typedPosts].sort(
+  /** @param {any} a @param {any} b */
+  (a, b) => new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime(),
+);
+
+/** @type {Record<string, string>} */
+const XML_ESCAPES = {
+  "<": "&lt;",
+  ">": "&gt;",
+  "&": "&amp;",
+  '"': "&quot;",
+  "'": "&apos;",
+};
+
+/** @param {string} value @returns {string} */
+const escapeXml = (value) =>
+  value.replace(/[<>&"']/g, (character) => XML_ESCAPES[character] ?? character);
+
+/** @param {string | undefined} image @returns {string} */
+const getImageMetadata = (image) => {
+  if (!image) return "";
+
+  const imageUrl = new URL(image, SITE.url).href;
+  const extension = new URL(imageUrl).pathname.split(".").pop()?.toLowerCase();
+  const mimeType = extension === "png" ? "image/png"
+    : extension === "jpg" || extension === "jpeg" ? "image/jpeg"
+    : extension === "gif" ? "image/gif"
+    : extension === "webp" ? "image/webp"
+    : undefined;
+
+  if (!mimeType) return "";
+
+  return `<media:content xmlns:media="http://search.yahoo.com/mrss/" url="${escapeXml(imageUrl)}" medium="image" type="${mimeType}" />`;
+};
 
 export const GET = () =>
   rss({
-    // `<title>` field in output xml
     title: `${SITE.name}`,
-    // `<description>` field in output xml
     description: SITE.description,
-    // base URL for RSS <item> links
-    // SITE will use "site" from your project's astro.config.
     site: import.meta.env.SITE,
-    // list of `<item>`s in output xml
-    // simple example: generate items for every md file in /src/pages
-    // see "Generating items" section for required frontmatter and advanced use cases
-    items: sortedPosts.map((item) => ({
+    items: sortedPosts.map(/** @param {any} item */ (item) => ({
       title: item.frontmatter.title,
       description: item.frontmatter.description,
       link: item.url,
       pubDate: item.frontmatter.date,
-
+      categories: item.frontmatter.tags ?? [],
+      customData: getImageMetadata(item.frontmatter.image),
     })),
-    // (optional) inject custom xml
     customData: `<language>es-es</language>`,
     stylesheet: "/rss/styles.xsl",
   });
