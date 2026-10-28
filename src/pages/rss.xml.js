@@ -4,7 +4,8 @@ import { SITE } from "../config";
 const allPosts = Object.values(import.meta.glob("./blog/*.md", { eager: true }));
 const typedPosts = /** @type {any[]} */ (allPosts);
 
-const sortedPosts = typedPosts.toSorted(
+const sortedPosts = [...typedPosts].sort(
+  /** @param {any} a @param {any} b */
   (a, b) => new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime(),
 );
 
@@ -43,7 +44,7 @@ export const GET = () =>
     title: `${SITE.name}`,
     description: SITE.description,
     site: import.meta.env.SITE,
-    items: sortedPosts.map((item) => ({
+    items: sortedPosts.map(/** @param {any} item */ (item) => ({
       title: item.frontmatter.title,
       description: item.frontmatter.description,
       link: item.url,
